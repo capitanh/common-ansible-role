@@ -1,0 +1,16 @@
+---
+- name: Install base packages
+  apt:
+    name: "{{packages}}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+    - git
+    - mc
+    - htop
+    - wget
+    - tmux
+    - vim
+    - unzip
+    - lnav

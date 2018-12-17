@@ -1,0 +1,5 @@
+---
+###############################################################################
+# General Config
+admin_user:           admin                 # Administration user for all hosts
+admin_password:       admin                 # Admin user password
