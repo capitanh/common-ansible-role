@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: Luis Novo
-  description: Used to bootstrap config of every new host. It performs the following tasks:
+  description: Used to bootstrap config of every new host
   company:
   license: "Simplified BSD License"
 
