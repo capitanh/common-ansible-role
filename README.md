@@ -41,7 +41,7 @@ Example Playbook
 ----------------
 Register the role in requirements.yml:
 ```yaml
-    - src: capitanh.common-ansible-role
+    - src: capitanh.common_ansible_role
       name: common
 ```
 Include it in your playbooks:
