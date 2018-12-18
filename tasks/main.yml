@@ -64,3 +64,11 @@
     dest: /usr/local/bin
     mode: 0755
     remote_src: yes
+
+- name: Copy micro editor settings
+  copy:
+    src: micro-settings.json
+    dest: "/home/{{admin_user}}/.config/micro/settings.json"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
