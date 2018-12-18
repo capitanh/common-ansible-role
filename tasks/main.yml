@@ -17,7 +17,7 @@
     dest: "/etc/sudoers.d/{{admin_user}}"
     owner: root
     group: root
-    mode: 0644
+    mode: 0440
 
 - include_tasks: "{{ansible_os_family}}.yml"
 
