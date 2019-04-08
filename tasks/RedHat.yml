@@ -16,5 +16,6 @@
       - vim
       - unzip
       - lnav
+      - pip
     state: present
     disable_gpg_check: yes
