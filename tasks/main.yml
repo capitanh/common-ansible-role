@@ -95,3 +95,7 @@
     dest: /usr/local/bin
     mode: 0755
     remote_src: yes
+
+- name: Install pydf
+  pip:
+    name: pydf
