@@ -17,6 +17,9 @@
       - unzip
       - lnav
       - python-pip
-      - pydf
     state: present
     disable_gpg_check: yes
+
+- name: Install pydf via pip
+  pip:
+    name: pydf
