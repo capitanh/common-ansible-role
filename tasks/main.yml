@@ -1,7 +1,7 @@
 ---
 - name: Add the OS specific variables
   include_vars: "{{ ansible_os_family }}.yml"
-  
+
 - name: Create user
   user:
     name: "{{admin_user}}"
@@ -9,7 +9,7 @@
     state: present
     generate_ssh_key: yes
     update_password: always
-    shell: /bin/bash
+    shell: /bin/zsh
 
 - name: Add admin user to sudoers
   template:
@@ -71,7 +71,7 @@
     state: directory
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
-    mode: 0755    
+    mode: 0755
 
 - name: Copy micro editor settings
   copy:
