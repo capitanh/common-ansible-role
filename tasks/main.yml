@@ -43,6 +43,11 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
 
+- name: Download zprezto
+  git:
+    repo: https://github.com/sorin-ionescu/prezto.git
+    dest: /usr/local/share/zprezto
+
 - name: Enable ssh password authentication
   lineinfile:
     path: /etc/ssh/sshd_config
