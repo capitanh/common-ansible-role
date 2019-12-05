@@ -48,6 +48,20 @@
     repo: https://github.com/sorin-ionescu/prezto.git
     dest: /usr/local/share/zprezto
 
+- name: Create sym links to zprezto resources
+  file:
+    src: "/usr/local/share/zprezto/runcoms/{item}"
+    dest: "/home/{{admin_user}}/.{item}"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    state: link
+  with_items:
+    - zlogin
+    - zlogout
+    - zpreztorc
+    - zprofile
+    - zshenv
+
 - name: Enable ssh password authentication
   lineinfile:
     path: /etc/ssh/sshd_config

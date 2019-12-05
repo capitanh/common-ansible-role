@@ -2,6 +2,7 @@
 if [[ -s "/usr/local/share/zprezto/init.zsh" ]]; then
   source "/usr/local/share/zprezto/init.zsh"
 fi
+ZSH_HIGHLIGHT_STYLES[path]='bold'
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
