@@ -29,10 +29,17 @@
     group: root
     mode: 0644
 
-- name: Custom prompt
+#- name: Custom prompt
+#  template:
+#    src: bashrc
+#    dest: "/home/{{admin_user}}/.bashrc"
+#    owner: "{{admin_user}}"
+#    group: "{{admin_user}}"
+
+- name: Custom zsh options
   template:
-    src: bashrc
-    dest: "/home/{{admin_user}}/.bashrc"
+    src: zshrc
+    dest: "/home/{{admin_user}}/.zshrc"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
 
