@@ -7,7 +7,7 @@
 
 - name: Install base packages
   yum:
-    name: 
+    name:
       - git
       - mc
       - htop
@@ -17,6 +17,7 @@
       - unzip
       - lnav
       - python-pip
+      - zsh
     state: present
     disable_gpg_check: yes
 
