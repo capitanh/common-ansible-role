@@ -58,9 +58,16 @@
   with_items:
     - zlogin
     - zlogout
-    - zpreztorc
     - zprofile
     - zshenv
+
+- name: Copy zprezto modules config
+  copy:
+    src: zpreztorc
+    dest: "/home/{{admin_user}}/.zpreztorc"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
 
 - name: Enable ssh password authentication
   lineinfile:
