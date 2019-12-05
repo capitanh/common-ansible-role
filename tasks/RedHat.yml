@@ -9,6 +9,7 @@
   yum:
     name:
       - git
+      - tig
       - mc
       - htop
       - wget
