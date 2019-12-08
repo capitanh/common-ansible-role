@@ -75,7 +75,7 @@
     dest: /usr/local/share/zprezto/modules/prompt/functions/
     mode: 0644
 
-- name: Copy hr commando
+- name: Copy hr command
   copy:
     src: hr
     dest: /usr/local/bin/
