@@ -75,6 +75,12 @@
     dest: /usr/local/share/zprezto/modules/prompt/functions/
     mode: 0644
 
+- name: Copy hr commando
+  copy:
+    src: hr
+    dest: /usr/local/bin/
+    mode: 0755
+
 - name: Enable ssh password authentication
   lineinfile:
     path: /etc/ssh/sshd_config
