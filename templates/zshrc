@@ -38,6 +38,7 @@ alias ll='ls -l'
 alias la='ls -la'
 alias tf='tail -f'
 alias k='k --human --group-directories-first'
+alias df='pydf'
 
 #############################################################
 # Custom environment variables
