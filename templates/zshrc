@@ -1,7 +1,7 @@
 #############################################################
 # zprezto
-if [[ -s "/usr/local/share/zprezto/init.zsh" ]]; then
-  source "/usr/local/share/zprezto/init.zsh"
+if [[ -s "{{zprezto_dir}}/init.zsh" ]]; then
+  source "{{zprezto_dir}}/init.zsh"
 fi
 ZSH_HIGHLIGHT_STYLES[path]='bold'
 
@@ -15,7 +15,7 @@ unsetopt autocd beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/admin/.zshrc'
+zstyle :compinstall filename '/home/{{admin_user}}/.zshrc'
 autoload -Uz compinit
 compinit
 

@@ -50,7 +50,7 @@
 
 - name: Create sym links to zprezto resources
   file:
-    src: "/usr/local/share/zprezto/runcoms/{{item}}"
+    src: "{{zprezto_dir}}/runcoms/{{item}}"
     dest: "/home/{{admin_user}}/.{{item}}"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
@@ -72,7 +72,7 @@
 - name: Copy custom prompt config
   copy:
     src: prompt_luis_setup
-    dest: /usr/local/share/zprezto/modules/prompt/functions/
+    dest: "{{zprezto_dir}}/modules/prompt/functions/"
     mode: 0644
 
 - name: Copy hr command
@@ -97,15 +97,15 @@
 
 - name: Download micro editor
   unarchive:
-    src: https://github.com/zyedidia/micro/releases/download/v1.4.1/micro-1.4.1-linux64.tar.gz
+    src: "https://github.com/zyedidia/micro/releases/download/v{{micro_version}}/micro-{{micro_version}}-linux64.tar.gz"
     dest: /tmp
     remote_src: yes
     validate_certs: no
-    creates: /tmp/micro-1.4.1
+    creates: "/tmp/micro-{{micro_version}}"
 
 - name: Copy micro editor executable
   copy:
-    src: /tmp/micro-1.4.1/micro
+    src: /tmp/micro-{{micro_version}}/micro
     dest: /usr/local/bin/
     mode: 0755
     remote_src: yes
@@ -128,15 +128,15 @@
 
 - name: Download bat
   unarchive:
-    src: https://github.com/sharkdp/bat/releases/download/v0.10.0/bat-v0.10.0-x86_64-unknown-linux-musl.tar.gz
+    src: "https://github.com/sharkdp/bat/releases/download/{{bat_version}}/bat-{{bat_version}}-x86_64-unknown-linux-musl.tar.gz"
     dest: /tmp
     remote_src: yes
     validate_certs: no
-    creates: /tmp/bat-v0.10.0-x86_64-unknown-linux-musl
+    creates: "/tmp/bat-{{bat_version}}-x86_64-unknown-linux-musl"
 
 - name: Copy bat executable
   copy:
-    src: /tmp/bat-v0.10.0-x86_64-unknown-linux-musl/bat
+    src: /tmp/bat-{{bat_version}}-x86_64-unknown-linux-musl/bat
     dest: /usr/local/bin/
     mode: 0755
     remote_src: yes

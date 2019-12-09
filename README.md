@@ -6,7 +6,7 @@ Used to bootstrap config of every new host. It performs the following tasks:
 * Sets motd
 * Sets custom bash prompt
 * Enables ssh password authentication
-* Downloads and install micro editor
+* Downloads and install micro editor, bat (cat replacement) and some other shell utilities
 
 It also install following packages:
 
@@ -19,7 +19,6 @@ It also install following packages:
 * unzip
 * lnav (Log files navigator)
 
-
 Requirements
 ------------
 None
@@ -28,8 +27,9 @@ Role Variables
 --------------
 This role requires the following variables to be defined elsewhere in the playbook that uses it:
 ```yaml
-    admin_user:           admin             # Administration user for all hosts
-    admin_password:       admin             # Admin user password
+    admin_user:           admin                     # Administration user for all hosts
+    admin_password:       admin                     # Admin user password
+    zprezto_dir:          /usr/local/share/zprezto  # zprezto install dir
 ```
 All of them are already defined in /defaults/main.yml, feel free to overwrite them
 
