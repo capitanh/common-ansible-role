@@ -47,6 +47,7 @@
   git:
     repo: https://github.com/sorin-ionescu/prezto.git
     dest: /usr/local/share/zprezto
+    update: no
 
 - name: Create sym links to zprezto resources
   file:
