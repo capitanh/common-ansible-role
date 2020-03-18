@@ -28,7 +28,6 @@
 #    name: pydf
 
 - name: Install pip packages
-  become_user: "{{admin_user}}"
   pip:
     executable: /bin/pip3
     name:
