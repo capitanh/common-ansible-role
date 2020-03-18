@@ -19,9 +19,18 @@
       - lnav
       - python-pip
       - zsh
+      - python3
     state: present
     disable_gpg_check: yes
 
-- name: Install pydf via pip
+#- name: Install pydf via pip
+#  pip:
+#    name: pydf
+
+- name: Install pip packages
   pip:
-    name: pydf
+    executable: /bin/pip3
+    name:
+      - pydf
+      - lfm
+  
