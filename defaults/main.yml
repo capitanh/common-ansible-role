@@ -4,6 +4,6 @@
 admin_user:           admin                     # Administration user for all hosts
 admin_password:       admin                     # Admin user password
 zprezto_dir:          /usr/local/share/zprezto  # zprezto install dir
-micro_version:        1.4.1                     # micro editor version
-#micro_version:        2.0.2                     # micro editor version
+#micro_version:        1.4.1                     # micro editor version
+micro_version:        2.0.2                     # micro editor version
 bat_version:          v0.12.1                   # bat (cat replacement) version
