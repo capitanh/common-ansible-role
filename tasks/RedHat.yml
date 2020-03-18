@@ -20,6 +20,7 @@
       #- python-pip
       - zsh
       - python3
+      - setuptools
     state: present
     disable_gpg_check: yes
 
