@@ -30,7 +30,7 @@
 - name: Install pip packages
   pip:
     executable: /bin/pip3
-    extra_args: --user
+    become_user: "{{admin_user}}"
     name:
       - pydf
       - lfm
