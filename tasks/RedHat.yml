@@ -30,8 +30,7 @@
 - name: Install pip packages
   pip:
     executable: /bin/pip3
-    become_user: "{{admin_user}}"
     name:
       - pydf
       - lfm
-  
+  become_user: "{{admin_user}}"
