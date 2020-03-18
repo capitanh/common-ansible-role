@@ -10,14 +10,14 @@
     name:
       - git
       - tig
-      - mc
+      #- mc
       - htop
       - wget
       - tmux
       - vim
       - unzip
       - lnav
-      - python-pip
+      #- python-pip
       - zsh
       - python3
     state: present
