@@ -10,27 +10,27 @@
     name:
       - git
       - tig
-      #- mc
+      - mc
       - htop
       - wget
       - tmux
       - vim
       - unzip
       - lnav
-      #- python-pip
+      - python-pip
       - zsh
       - python3
     state: present
     disable_gpg_check: yes
 
-#- name: Install pydf via pip
-#  pip:
-#    name: pydf
+- name: Install pydf via pip
+  pip:
+    name: pydf
 
 - name: Install pip packages
   pip:
     executable: /bin/pip3
     name:
       - setuptools
-      - pydf
+    #  - pydf
       - lfm
