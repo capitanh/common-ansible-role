@@ -37,6 +37,7 @@
   pip:
     executable: /bin/pip3
     name:
+      - setuptools
       - pydf
       - lfm
   vars:
