@@ -4,7 +4,7 @@
     path: /etc/yum.conf
     regexp: '^gpgcheck=1'
     line: 'gpgcheck=0'
-    
+
 - name: Enable EPEL Repos
   yum_repository:
     name: epel
@@ -37,6 +37,5 @@
   pip:
     executable: /bin/pip3
     name:
-      - setuptools
       - pydf
       - lfm
