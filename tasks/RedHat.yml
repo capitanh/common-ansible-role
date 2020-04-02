@@ -39,3 +39,5 @@
     name:
       - pydf
       - lfm
+  vars:
+    ansible_python_interpreter: /bin/python3
