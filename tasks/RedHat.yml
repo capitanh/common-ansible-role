@@ -1,4 +1,10 @@
 ---
+- name: Disable yum gpg check
+  lineinfile:
+    path: /etc/yum.conf
+    regexp: '^gpgcheck=1'
+    line: 'gpgcheck=0'
+    
 - name: Enable EPEL Repos
   yum_repository:
     name: epel
@@ -27,10 +33,10 @@
 #  pip:
 #    name: pydf
 
-#- name: Install pip packages
-#  pip:
-#    executable: /bin/pip3
-#    name:
-#      - setuptools
-#      - pydf
-#      - lfm
+- name: Install pip packages
+  pip:
+    executable: /bin/pip3
+    name:
+      - setuptools
+      - pydf
+      - lfm
