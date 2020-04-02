@@ -19,7 +19,7 @@
       - lnav
       - zsh
     #  - python-pip
-    #  - python3
+      - python3
     state: present
     disable_gpg_check: yes
 
