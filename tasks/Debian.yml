@@ -15,6 +15,13 @@
     - vim
     - unzip
     - lnav
-    - python-pip
+    #- python-pip
     - pydf
     - zsh
+    - lfm
+
+#- name: Install pip packages
+#  pip:
+#    name:
+#      - pydf
+#      - lfm
