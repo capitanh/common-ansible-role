@@ -17,15 +17,15 @@
       - vim
       - unzip
       - lnav
-      - python-pip
       - zsh
+    #  - python-pip
     #  - python3
     state: present
     disable_gpg_check: yes
 
-- name: Install pydf via pip
-  pip:
-    name: pydf
+#- name: Install pydf via pip
+#  pip:
+#    name: pydf
 
 #- name: Install pip packages
 #  pip:
