@@ -35,9 +35,9 @@
 
 - name: Install pip packages
   pip:
-    executable: /bin/pip3
+    executable: pip3.6
     name:
       - pydf
-    #  - lfm
+      - lfm
   vars:
     ansible_python_interpreter: /bin/python3
