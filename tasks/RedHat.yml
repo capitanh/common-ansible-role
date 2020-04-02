@@ -37,8 +37,7 @@
   pip:
     executable: /bin/pip3
     name:
-      - setuptools
       - pydf
-      - lfm
+    #  - lfm
   vars:
     ansible_python_interpreter: /bin/python3
