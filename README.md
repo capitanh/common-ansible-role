@@ -29,7 +29,6 @@ This role requires the following variables to be defined elsewhere in the playbo
 ```yaml
     admin_user:           admin                     # Administration user for all hosts
     admin_password:       admin                     # Admin user password
-    zprezto_dir:          /usr/local/share/zprezto  # zprezto install dir
 ```
 All of them are already defined in /defaults/main.yml, feel free to overwrite them
 

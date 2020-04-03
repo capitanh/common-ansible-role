@@ -23,7 +23,6 @@
       - vim
       - unzip
       - lnav
-      - zsh
     #  - python-pip
       - python3
     state: present
