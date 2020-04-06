@@ -29,6 +29,7 @@ This role requires the following variables to be defined elsewhere in the playbo
 ```yaml
     admin_user:           admin                     # Administration user for all hosts
     admin_password:       admin                     # Admin user password
+    pip_packages:         {list}                    # List of packages to be installed by pip
 ```
 All of them are already defined in /defaults/main.yml, feel free to overwrite them
 

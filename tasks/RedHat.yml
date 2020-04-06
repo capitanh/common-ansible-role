@@ -23,20 +23,13 @@
       - vim
       - unzip
       - lnav
-    #  - python-pip
       - python3
     state: present
     disable_gpg_check: yes
 
-#- name: Install pydf via pip
-#  pip:
-#    name: pydf
-
 - name: Install pip packages
   pip:
     executable: pip3.6
-    name:
-      - pydf
-      - lfm
+    name: "{{pip_packages}}"
   vars:
     ansible_python_interpreter: /bin/python3
