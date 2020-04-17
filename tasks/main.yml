@@ -99,3 +99,19 @@
     src: k.sh
     dest: /usr/local/bin/
     mode: 0755
+
+- name: Make sure lfm config folder exists
+  file:
+    path: "/home/{{admin_user}}/.config/lfm"
+    state: directory
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0755
+
+- name: Copy lfm file manager settings
+  copy:
+    src: lfm.ini
+    dest: "/home/{{admin_user}}/.config/lfm/lfm.ini"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
