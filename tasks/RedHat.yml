@@ -22,7 +22,6 @@
       - tmux
       - vim
       - unzip
-      - setuptools
       #- lnav
       #- python3
     state: present
