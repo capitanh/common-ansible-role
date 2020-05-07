@@ -22,14 +22,5 @@
       - tmux
       - vim
       - unzip
-      #- lnav
-      #- python3
     state: present
     disable_gpg_check: yes
-
-#- name: Install pip packages
-#  pip:
-#    executable: pip3.6
-#    name: "{{pip_packages}}"
-#  vars:
-#    ansible_python_interpreter: /bin/python3
