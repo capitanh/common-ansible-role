@@ -5,11 +5,17 @@
     regexp: '^gpgcheck=1'
     line: 'gpgcheck=0'
 
+#- name: Enable EPEL Repos
+#  yum_repository:
+#    name: epel
+#    description: EPEL YUM repo
+#    baseurl: https://download.fedoraproject.org/pub/epel/7/x86_64/
+
 - name: Enable EPEL Repos
-  yum_repository:
-    name: epel
-    description: EPEL YUM repo
-    baseurl: https://download.fedoraproject.org/pub/epel/7/x86_64/
+  yum:
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    state: present
+    validate_certs: no
 
 - name: Install base packages
   yum:
