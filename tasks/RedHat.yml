@@ -22,7 +22,7 @@
       - tmux
       - vim
       - unzip
-      - lnav
+      #- lnav
       - python3
     state: present
     disable_gpg_check: yes
