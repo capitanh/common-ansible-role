@@ -22,7 +22,6 @@
     name:
       - git
       - tig
-      - mc
       - htop
       - wget
       - tmux
