@@ -29,3 +29,9 @@
       - unzip
     state: present
     disable_gpg_check: yes
+
+- name: Install (dnf) base packages
+  dnf:
+    name:
+      - python3
+    state: present
