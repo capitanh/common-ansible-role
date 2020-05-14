@@ -27,11 +27,13 @@
       - tmux
       - vim
       - unzip
+      - setuptools
+      - python-pip
     state: present
     disable_gpg_check: yes
 
-- name: Install (dnf) base packages
-  dnf:
-    name:
-      - python3
-    state: present
+#- name: Install (dnf) base packages
+#  dnf:
+#    name:
+#      - python3
+#    state: present
