@@ -13,16 +13,17 @@
 
 #- name: Enable EPEL Repos
 #  yum:
-#    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+#    name: epel-release
 #    state: present
 #    validate_certs: no
 
 - name: Install base packages
   yum:
     name:
+      - epel-release
       - git
-    #  - tig
-    #  - htop
+      - tig
+      - htop
       - wget
       - tmux
       - vim
