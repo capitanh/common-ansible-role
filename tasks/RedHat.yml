@@ -30,4 +30,5 @@
   dnf:
     name:
       - python3
+      - libnsl
     state: present
