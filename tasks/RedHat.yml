@@ -21,13 +21,13 @@
   yum:
     name:
       - git
-      - tig
-      - htop
+    #  - tig
+    #  - htop
       - wget
       - tmux
       - vim
       - unzip
-      - python-pip
+    #  - python-pip
     state: present
     disable_gpg_check: yes
 
