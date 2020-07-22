@@ -11,11 +11,11 @@
 #    description: EPEL YUM repo
 #    baseurl: https://download.fedoraproject.org/pub/epel/8/Everything/x86_64/
 
-- name: Enable EPEL Repos
-  yum:
-    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-    state: present
-    validate_certs: no
+#- name: Enable EPEL Repos
+#  yum:
+#    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+#    state: present
+#    validate_certs: no
 
 - name: Install base packages
   yum:
