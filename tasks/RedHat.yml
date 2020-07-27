@@ -34,6 +34,7 @@
 
 - name: Install required python modules
   pip:
-    name: "{{pip_packages}}"
+    name: "{{item}}"
     executable: /usr/bin/pip3
+  with_items: "{{pip_packages}}"
 
