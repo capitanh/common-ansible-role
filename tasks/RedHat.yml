@@ -36,5 +36,5 @@
   pip:
     name: "{{pip_packages}}"
     executable: /usr/bin/pip3
-
+    extra_args: --user admin
 
