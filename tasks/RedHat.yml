@@ -31,3 +31,9 @@
     name:
       - python3
     state: present
+
+- name: Install required python modules
+  pip:
+    name: "{{pip_packages}}"
+    executable: /usr/bin/pip3
+
