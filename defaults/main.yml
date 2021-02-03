@@ -3,5 +3,5 @@
 # General Config
 admin_user:           admin                     # Administration user for all hosts
 admin_password:       admin                     # Admin user password
-micro_version:        2.0.4                     # micro editor version
-bat_version:          v0.15.4                   # bat (cat replacement) version
+micro_version:        2.0.8                     # micro editor version
+bat_version:          v0.17.1                   # bat (cat replacement) version
