@@ -28,11 +28,6 @@
     owner: root
     group: root
     mode: 0644
-- name: Copy hr command
-  copy:
-    src: hr
-    dest: /usr/local/bin/
-    mode: 0755
 
 - name: Enable ssh password authentication
   lineinfile:
@@ -77,9 +72,12 @@
 
 - name: Copy k.sh ls alternative
   copy:
-    src: k.sh
+    src: {{item}}
     dest: /usr/local/bin/
     mode: 0755
+  with_items:
+    - k.sh
+    - hr
 
 - name: Install procs
   unarchive:
