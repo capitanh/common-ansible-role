@@ -116,9 +116,16 @@
     group: "{{admin_user}}"
     mode: 0644
 
-- name: Download procs
+- name: Install procs
   unarchive:
     src: "https://github.com/dalance/procs/releases/download/{{procs_version}}/procs-{{procs_version}}-x86_64-lnx.zip"
+    dest: /usr/local/bin/
+    remote_src: yes
+    validate_certs: no
+
+- name: Install gdu
+  unarchive:
+    src: "https://github.com/dundee/gdu/releases/download/{{gdu_version}}/gdu_linux_amd64.tgz"
     dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no

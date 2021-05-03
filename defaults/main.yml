@@ -4,3 +4,4 @@
 admin_user:           admin                     # Administration user for all hosts
 admin_password:       admin                     # Admin user password
 procs_version:        v0.11.4                   # procs (ps alternative) version
+gdu_version:          v4.11.1                   # gdu (du alternative) version
