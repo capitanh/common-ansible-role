@@ -122,4 +122,4 @@
     dest: /usr/local/bin/procs
     remote_src: yes
     validate_certs: no
-    creates: /usr/local/bin/procs
+    creates: /usr/local/bin/
