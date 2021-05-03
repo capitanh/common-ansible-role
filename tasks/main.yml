@@ -115,3 +115,11 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     mode: 0644
+
+- name: Download procs
+  unarchive:
+    src: "https://github.com/dalance/procs/releases/download/{{procs_version}}/procs-{{procs_version}}-x86_64-lnx.zip"
+    dest: /usr/local/bin/procs
+    remote_src: yes
+    validate_certs: no
+    creates: /usr/local/bin/procs
