@@ -72,7 +72,7 @@
 
 - name: Copy command alternatives
   copy:
-    src: {{item}}
+    src: "{{item}}"
     dest: /usr/local/bin/
     mode: 0755
   with_items:
