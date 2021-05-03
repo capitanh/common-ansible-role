@@ -17,3 +17,5 @@
     - pydf
     - lfm
     - httpie
+    - bat
+    - micro
