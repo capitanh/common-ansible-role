@@ -119,6 +119,6 @@
 - name: Download procs
   unarchive:
     src: "https://github.com/dalance/procs/releases/download/{{procs_version}}/procs-{{procs_version}}-x86_64-lnx.zip"
-    dest: /usr/local/bin/procs
+    dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no
