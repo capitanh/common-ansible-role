@@ -70,7 +70,7 @@
     group: "{{admin_user}}"
     mode: 0644
 
-- name: Copy k.sh ls alternative
+- name: Copy command alternatives
   copy:
     src: {{item}}
     dest: /usr/local/bin/
