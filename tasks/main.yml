@@ -91,3 +91,10 @@
     dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no
+
+- name: Install navi
+  unarchive:
+    src: "https://github.com/denisidoro/navi/releases/download/v2.16.0/navi-v2.16.0-x86_64-unknown-linux-musl.tar.gz"
+    dest: /usr/local/bin/
+    remote_src: yes
+    validate_certs: no
