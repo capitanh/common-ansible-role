@@ -84,33 +84,4 @@
     dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no
-  with_dict:
-    - tools
-
-#- name: Install procs
-#  unarchive:
-#    src: "https://github.com/dalance/procs/releases/download/{{procs_version}}/procs-{{procs_version}}-x86_64-lnx.zip"
-#    dest: /usr/local/bin/
-#    remote_src: yes
-#    validate_certs: no
-#
-#- name: Install gdu
-#  unarchive:
-#    src: "https://github.com/dundee/gdu/releases/download/{{gdu_version}}/gdu_linux_amd64.tgz"
-#    dest: /usr/local/bin/
-#    remote_src: yes
-#    validate_certs: no
-#
-#- name: Install fzf
-#  unarchive:
-#    src: "https://github.com/junegunn/fzf/releases/download/0.27.0/fzf-0.27.0-linux_amd64.tar.gz"
-#    dest: /usr/local/bin/
-#    remote_src: yes
-#    validate_certs: no
-#
-#- name: Install navi
-#  unarchive:
-#    src: "https://github.com/denisidoro/navi/releases/download/v2.16.0/navi-v2.16.0-x86_64-unknown-linux-musl.tar.gz"
-#    dest: /usr/local/bin/
-#    remote_src: yes
-#    validate_certs: no
+  with_dict: "{{mytools}}"
