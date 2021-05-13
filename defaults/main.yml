@@ -4,10 +4,12 @@
 admin_user:           admin                     # Administration user for all hosts
 admin_password:       admin                     # Admin user password
 
+fzf_dir:              /usr/local/share          # fzf source path
 procs_version:        v0.11.4                   # procs (ps alternative) version
 gdu_version:          v4.11.1                   # gdu (du alternative) version
 fzf_version:          0.27.0                    # fzf (fuzzy finder) version
 navi_version:         v2.16.0                   # navi (interactive cheatsheets) version
+
 mytools:
   procs: "https://github.com/dalance/procs/releases/download/{{procs_version}}/procs-{{procs_version}}-x86_64-lnx.zip"
   gdu:   "https://github.com/dundee/gdu/releases/download/{{gdu_version}}/gdu_linux_amd64.tgz"
