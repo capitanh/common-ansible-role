@@ -29,19 +29,19 @@
     group: root
     mode: 0644
 
-- name: Enable ssh password authentication
-  lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^PasswordAuthentication no'
-    line: 'PasswordAuthentication yes'
-  notify: Restart sshd
-
-- name: Enable ssh password authentication
-  lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^ChallengeResponseAuthentication no'
-    line: 'ChallengeResponseAuthentication yes'
-  notify: Restart sshd
+#- name: Enable ssh password authentication
+#  lineinfile:
+#    path: /etc/ssh/sshd_config
+#    regexp: '^PasswordAuthentication no'
+#    line: 'PasswordAuthentication yes'
+#  notify: Restart sshd
+#
+#- name: Enable ssh password authentication
+#  lineinfile:
+#    path: /etc/ssh/sshd_config
+#    regexp: '^ChallengeResponseAuthentication no'
+#    line: 'ChallengeResponseAuthentication yes'
+#  notify: Restart sshd
 
 - name: Make sure config folders exist
   file:
