@@ -15,21 +15,19 @@ fzf_dir:              /usr/local/share/fzf/     # fzf source path
 tools:
   procs:                                      # procs (ps alternative)
     version:        v0.11.6
-    arch:           x86_64-lnx
-    repo:           dalance/procs
-    ext:            zip
+    url:            "https://github.com/dalance/procs/releases/download/{{version}}/procs-{{version}}-x86_64-lnx.zip"
 #  gdu:                                        # gdu (du alternative)
 #    version:        v4.11.2
 #    arch:           linux_amd64
 #    repo:           dundee/gdu
 #    ext:            tgz
-  fzf:                                        # fzf (fuzzy finder)
-    version:        0.27.0
-    arch:           linux_amd64
-    repo:           junegunn/fzf
-    ext:            tar.gz
-  navi:                                       # navi (interactive cheatsheets) version
-    version:        v2.16.0
-    arch:           x86_64-unknown-linux-musl
-    repo:           denisidoro/navi
-    ext:            tar.gz
+#  fzf:                                        # fzf (fuzzy finder)
+#    version:        0.27.0
+#    arch:           linux_amd64
+#    repo:           junegunn/fzf
+#    ext:            tar.gz
+#  navi:                                       # navi (interactive cheatsheets) version
+#    version:        v2.16.0
+#    arch:           x86_64-unknown-linux-musl
+#    repo:           denisidoro/navi
+#    ext:            tar.gz
