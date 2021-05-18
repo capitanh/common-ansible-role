@@ -78,13 +78,21 @@
   with_items:
     - hr
 
+#- name: Install tools
+#  unarchive:
+#    src: "{{item.value}}"
+#    dest: /usr/local/bin/
+#    remote_src: yes
+#    validate_certs: no
+#  with_dict: "{{mytools}}"
+
 - name: Install tools
   unarchive:
-    src: "{{item.value}}"
+    src: "https://github.com/{{item.value.repo}}/releases/latest/download/{{item.key}}-{{item.value.arch}}.{{item.value.ext}}"
     dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no
-  with_dict: "{{mytools}}"
+  with_dict: "{{tools}}"
 
 - name: Donwload fzf
   git:
