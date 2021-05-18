@@ -78,17 +78,9 @@
   with_items:
     - hr
 
-#- name: Install tools
-#  unarchive:
-#    src: "{{item.value}}"
-#    dest: /usr/local/bin/
-#    remote_src: yes
-#    validate_certs: no
-#  with_dict: "{{mytools}}"
-
 - name: Install tools
   unarchive:
-    src: "{{item.value.url}}"
+    src: "{{item.value}}"
     dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no
