@@ -88,7 +88,7 @@
 
 - name: Install tools
   unarchive:
-    src: "https://github.com/{{item.value.repo}}/releases/latest/download/{{item.key}}-{{item.value.arch}}.{{item.value.ext}}"
+    src: "https://github.com/{{item.value.repo}}/releases/latest/download/{{item.value.version}}/{{item.key}}-{{item.value.version}}-{{item.value.arch}}.{{item.value.ext}}"
     dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no
