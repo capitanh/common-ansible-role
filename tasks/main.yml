@@ -86,16 +86,8 @@
     validate_certs: no
   with_dict: "{{tools}}"
 
-- name: Donwload fzf
+- name: Donwload fzf extra stuff
   git:
     repo: https://github.com/junegunn/fzf.git
     dest: "{{fzf_dir}}"
     depth: 1
-
-- name: Copy fzf autocompletion and keybindings
-  template:
-    src: fzf.zsh
-    dest: "/home/{{admin_user}}/.fzf.zsh"
-    owner: "{{admin_user}}"
-    group: "{{admin_user}}"
-    mode: 0644

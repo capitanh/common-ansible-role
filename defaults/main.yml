@@ -4,11 +4,11 @@
 admin_user:           admin                     # Administration user for all hosts
 admin_password:       admin                     # Admin user password
 
-fzf_dir:              /usr/local/share/fzf/     # fzf source path
+fzf_dir:              /usr/local/share/fzf      # fzf source path
 
 tools:
   procs: "https://github.com/dalance/procs/releases/download/v0.11.6/procs-v0.11.6-x86_64-lnx.zip"
   gdu:   "https://github.com/dundee/gdu/releases/download/v4.11.2/gdu_linux_amd64.tgz"
-  fzf:   "https://github.com/junegunn/fzf/releases/download/0.27.0/fzf-0.27.0-linux_amd64.tar.gz"
+  fzf:   "https://github.com/junegunn/fzf/releases/download/0.27.2/fzf-0.27.2-linux_amd64.tar.gz"
   navi:  "https://github.com/denisidoro/navi/releases/download/v2.16.0/navi-v2.16.0-x86_64-unknown-linux-musl.tar.gz"
 
