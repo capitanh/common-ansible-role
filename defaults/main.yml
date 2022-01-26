@@ -7,6 +7,6 @@ admin_password:       admin                     # Admin user password
 fzf_dir:              /usr/local/share/fzf      # fzf source path
 
 tools:
-  procs: "https://github.com/dalance/procs/releases/download/v0.11.13/procs-v0.11.13-x86_64-lnx.zip"
+  procs: "https://github.com/dalance/procs/releases/download/v0.12.0/procs-v0.12.0-x86_64-lnx.zip"
   gdu:   "https://github.com/dundee/gdu/releases/download/v5.12.1/gdu_linux_amd64.tgz"
   fzf:   "https://github.com/junegunn/fzf/releases/download/0.29.0/fzf-0.29.0-linux_amd64.tar.gz"
