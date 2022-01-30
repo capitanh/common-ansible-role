@@ -2,32 +2,32 @@
 - name: Add the OS specific variables
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Create user
-  user:
-    name: "{{admin_user}}"
-    password: "{{admin_password|password_hash('sha512')}}"
-    state: present
-    generate_ssh_key: yes
-    update_password: always
-    shell: /bin/zsh
-
-- name: Add admin user to sudoers
-  template:
-    src: admin_sudoers
-    dest: "/etc/sudoers.d/{{admin_user}}"
-    owner: root
-    group: root
-    mode: 0440
-
-- include_tasks: "{{ansible_os_family}}.yml"
-
-- name: Set motd
-  copy:
-    src: motd
-    dest: /etc
-    owner: root
-    group: root
-    mode: 0644
+#- name: Create user
+#  user:
+#    name: "{{admin_user}}"
+#    password: "{{admin_password|password_hash('sha512')}}"
+#    state: present
+#    generate_ssh_key: yes
+#    update_password: always
+#    shell: /bin/zsh
+#
+#- name: Add admin user to sudoers
+#  template:
+#    src: admin_sudoers
+#    dest: "/etc/sudoers.d/{{admin_user}}"
+#    owner: root
+#    group: root
+#    mode: 0440
+#
+#- include_tasks: "{{ansible_os_family}}.yml"
+#
+#- name: Set motd
+#  copy:
+#    src: motd
+#    dest: /etc
+#    owner: root
+#    group: root
+#    mode: 0644
 
 #- name: Enable ssh password authentication
 #  lineinfile:
