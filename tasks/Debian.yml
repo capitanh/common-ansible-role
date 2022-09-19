@@ -37,3 +37,4 @@
     - yadm
     - fzf
     - jq
+    - python3-pip
