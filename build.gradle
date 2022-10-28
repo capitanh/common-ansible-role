@@ -4,8 +4,3 @@ plugins {
 
 //Automatic versioning
 project.version = scmVersion.version
-scmVersion {
-  tag {
-    prefix.set("")
-  }
-}
