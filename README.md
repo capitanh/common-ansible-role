@@ -4,20 +4,29 @@ Used to bootstrap config of every new host. It performs the following tasks:
 
 * Creates an admin user and makes it sudoer
 * Sets motd
-* Sets custom bash prompt
+* Sets custom zsh prompt
 * Enables ssh password authentication
-* Downloads and install micro editor, bat (cat replacement) and some other shell utilities
 
 It also install following packages:
 
 * git
-* mc (Midnight Commander)
+* tig
 * htop
 * wget
-* tmux (Terminal multiplexer)
+* tmux
 * vim
 * unzip
-* lnav (Log files navigator)
+* lnav
+* pydf
+* lfm
+* httpie
+* bat
+* micro
+* exa
+* shellcheck
+* yadm
+* jq
+* python3-pip
 
 Requirements
 ------------
@@ -29,7 +38,6 @@ This role requires the following variables to be defined elsewhere in the playbo
 ```yaml
     admin_user:           admin                     # Administration user for all hosts
     admin_password:       admin                     # Admin user password
-    pip_packages:         {list}                    # List of packages to be installed by pip
 ```
 All of them are already defined in /defaults/main.yml, feel free to overwrite them
 
@@ -52,4 +60,4 @@ Include it in your playbooks:
 ```
 License
 -------
-BSD
+Apache License, Version 2.0

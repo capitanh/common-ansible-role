@@ -35,6 +35,5 @@
     - exa
     - shellcheck
     - yadm
-    - fzf
     - jq
     - python3-pip
