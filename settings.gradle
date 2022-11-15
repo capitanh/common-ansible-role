@@ -1,0 +1,31 @@
+//Plugins declaration
+plugins {
+  id "com.mooltiverse.oss.nyx" version "1.2.2"
+}
+
+//Global properties
+rootProject.name = 'common-ansible-role'
+//nyx version manager plugin configuration
+nyx {
+  preset = 'extended'
+  releasePrefix = 'v'
+  releaseTypes {
+    enabled = ['master']
+    publicationServices = ['github']
+    items {
+      master {
+        publish = 'true'
+      }
+    }
+  }
+  services {
+    github {
+      type = 'GITHUB'
+      options{
+        AUTHENTICATION_TOKEN = $System.env.GITHUB_ACCESS_TOKEN
+        REPOSITORY_NAME = 'common-ansible-role'
+        REPOSITORY_OWNER = 'capitanh'
+      }
+    }
+  }  
+}
