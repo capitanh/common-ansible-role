@@ -28,6 +28,20 @@ It also install following packages:
 * jq
 * python3-pip
 
+Release process
+------------
+There is a fully automated process to create new versions, just run:
+```bash
+git commit --allow-empty -am "feat: Your message here"
+git push
+gradle release
+```
+The process uses conventional commits to increase version numbers according to the following commit prefixes:
+* fix: Increase patch
+* feat: Increase minor
+* BREAKING: Increase mayor
+
+
 Requirements
 ------------
 None
