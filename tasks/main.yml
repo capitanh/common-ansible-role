@@ -2,6 +2,10 @@
 - name: Add the OS specific variables
   include_vars: "{{ ansible_os_family }}.yml"
 
+- name: Set timezone to Europe/Madrid
+  community.general.timezone:
+    name: Europe/Madrid
+
 - name: Create user
   user:
     name: "{{admin_user}}"
