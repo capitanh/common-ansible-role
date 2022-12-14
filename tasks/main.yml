@@ -41,6 +41,14 @@
     group: "{{admin_user}}"
     mode: 0644
 
+- name: Copy git config file
+  copy:
+    src: gitconfig
+    dest: "/home/{{admin_user}}/.gitconfig"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
 #- name: Enable ssh password authentication
 #  lineinfile:
 #    path: /etc/ssh/sshd_config
