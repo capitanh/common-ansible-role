@@ -7,7 +7,7 @@
   remote = green
 [core]
   editor = micro
-  pager = bat
+  pager = batcat
 [alias]
   co = checkout
   br = branch
