@@ -73,6 +73,7 @@
   with_items:
     - micro
     - lfm
+    - bat
 
 - name: Copy micro editor settings
   copy:
@@ -89,6 +90,14 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     mode: 0644
+
+- name: Copy bat settings
+  copy:
+    src: batconfig
+    dest: "/home/{{admin_user}}/.config/bat/config"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644    
 
 - name: Copy command alternatives
   copy:
