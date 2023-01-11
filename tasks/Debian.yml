@@ -37,3 +37,4 @@
     - yadm
     - jq
     - python3-pip
+    - direnv
