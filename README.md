@@ -27,6 +27,8 @@ It also install following packages:
 * yadm
 * jq
 * python3-pip
+* direnv
+* pass
 
 Release process
 ------------
