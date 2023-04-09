@@ -7,8 +7,12 @@
   remote = green
 [core]
   editor = micro
-  pager = batcat
+  pager = delta
 [alias]
   co = checkout
   br = branch
   st = status
+[delta]
+  side-by-side = true
+[interactive]
+  diffFilter = delta --color-only --features=interactive
