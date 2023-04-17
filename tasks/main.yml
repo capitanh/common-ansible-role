@@ -49,6 +49,14 @@
     group: "{{admin_user}}"
     mode: 0644
 
+- name: Copy gitignore file
+  copy:
+    src: gitignore
+    dest: "/home/{{admin_user}}/.gitignore"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644    
+
 #- name: Enable ssh password authentication
 #  lineinfile:
 #    path: /etc/ssh/sshd_config

@@ -8,6 +8,7 @@
 [core]
   editor = micro
   pager = delta
+  excludesFile = ~/.gitignore
 [alias]
   co = checkout
   br = branch
