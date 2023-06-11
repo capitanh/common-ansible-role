@@ -14,6 +14,9 @@ nyx {
     publicationServices = ['github']
     items {
       master {
+        gitCommit = 'true'
+        gitCommitMessage = 'Release version '
+        gitPush = 'true'        
         publish = 'true'
       }
     }
