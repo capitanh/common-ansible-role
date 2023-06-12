@@ -38,16 +38,21 @@ You will need to export the two following environments variables:
 
 Release process
 ------------
-There is a fully automated process to create new versions, just run:
+There is a github action to perform a fully automated release process. Just make sure to provide correct conventional commits message:
+
 ```bash
-git commit --allow-empty -am "feat: Your message here"
+git commit [--allow-empty] -am "[fix|feat|BREAKING]: Your message here"
 git push
-gradle release
 ```
 The process uses conventional commits to increase version numbers according to the following commit prefixes:
 * fix: Increase patch
 * feat: Increase minor
 * BREAKING: Increase mayor
+
+To perform a manual release, after commiting all changes just run:
+```bash
+gradle release
+```
 
 Make sure to have ANSIBLE_GALAXY_API_KEY exported environment variable with your personal API Key (https://galaxy.ansible.com/me/preferences), then import the new version into Ansible Galaxy repo:
 ```bash
