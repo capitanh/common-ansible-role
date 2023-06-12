@@ -25,7 +25,7 @@ nyx {
     github {
       type = 'GITHUB'
       options{
-        AUTHENTICATION_TOKEN = "${System.env.GITHUB_ACCESS_TOKEN}"
+        AUTHENTICATION_TOKEN = "${System.env.GTHB_ACCESS_TOKEN}"
         REPOSITORY_NAME = 'common-ansible-role'
         REPOSITORY_OWNER = 'capitanh'
       }

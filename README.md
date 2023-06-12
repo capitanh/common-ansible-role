@@ -30,6 +30,12 @@ It also install following packages:
 * direnv
 * pass
 
+Requirements
+------------
+You will need to export the two following environments variables:
+* GTHB_ACCESS_TOKEN (Personal github access token)
+* ANSIBLE_GALAXY_API_KEY (Personal Galaxy web repo API Key, you can get one here: https://galaxy.ansible.com/me/preferences)
+
 Release process
 ------------
 There is a fully automated process to create new versions, just run:
@@ -48,16 +54,12 @@ Make sure to have ANSIBLE_GALAXY_API_KEY exported environment variable with your
 ansible-galaxy role import -v --token $ANSIBLE_GALAXY_API_KEY --role-name capitanh.common_ansible_role capitanh common-ansible-role
 ```
 
-Requirements
-------------
-None
-
 Role Variables
 --------------
 This role requires the following variables to be defined elsewhere in the playbook that uses it:
 ```yaml
-    admin_user:           admin                     # Administration user for all hosts
-    admin_password:       admin                     # Admin user password
+admin_user:           admin                     # Administration user for all hosts
+admin_password:       admin                     # Admin user password
 ```
 All of them are already defined in /defaults/main.yml, feel free to overwrite them
 
@@ -69,14 +71,14 @@ Example Playbook
 ----------------
 Register the role in requirements.yml:
 ```yaml
-    - src: capitanh.common_ansible_role
-      name: common
+- src: capitanh.common_ansible_role
+  name: common
 ```
 Include it in your playbooks:
 ```yaml
-    - hosts: servers
-      roles:
-      - common
+- hosts: servers
+  roles:
+  - common
 ```
 License
 -------
