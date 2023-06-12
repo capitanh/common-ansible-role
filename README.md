@@ -43,6 +43,10 @@ The process uses conventional commits to increase version numbers according to t
 * feat: Increase minor
 * BREAKING: Increase mayor
 
+Make sure to have ANSIBLE_GALAXY_API_KEY exported environment variable with your personal API Key (https://galaxy.ansible.com/me/preferences), then import the new version into Ansible Galaxy repo:
+```bash
+ansible-galaxy role import -v --token $ANSIBLE_GALAXY_API_KEY --role-name capitanh.common_ansible_role capitanh common-ansible-role
+```
 
 Requirements
 ------------
