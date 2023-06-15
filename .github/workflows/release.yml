@@ -21,7 +21,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 7.6
-      - run: gradle release
+      run: gradle release
   galaxy-import:
     name: Publish on Ansible Galaxy
     runs-on: ubuntu-latest
