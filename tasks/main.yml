@@ -33,29 +33,17 @@
     group: root
     mode: 0644
 
-- name: Copy tmux conf file
+- name: Copy config files
   copy:
-    src: tmux.conf
-    dest: "/home/{{admin_user}}/.tmux.conf"
+    src: "{{item}}"
+    dest: "/home/{{admin_user}}/.{{item}}"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     mode: 0644
-
-- name: Copy git config file
-  copy:
-    src: gitconfig
-    dest: "/home/{{admin_user}}/.gitconfig"
-    owner: "{{admin_user}}"
-    group: "{{admin_user}}"
-    mode: 0644
-
-- name: Copy gitignore file
-  copy:
-    src: gitignore
-    dest: "/home/{{admin_user}}/.gitignore"
-    owner: "{{admin_user}}"
-    group: "{{admin_user}}"
-    mode: 0644    
+  with_items:
+    - tmux.conf
+    - gitconfig
+    - gitignore
 
 #- name: Enable ssh password authentication
 #  lineinfile:
@@ -105,7 +93,7 @@
     dest: "/home/{{admin_user}}/.config/bat/config"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
-    mode: 0644    
+    mode: 0644
 
 - name: Copy command alternatives
   copy:
@@ -121,6 +109,9 @@
     dest: /usr/local/bin/
     remote_src: yes
     validate_certs: no
+    owner: root
+    group: root
+    mode: 0755
   with_dict: "{{tools}}"
 
 - name: Donwload fzf extra stuff
@@ -128,3 +119,7 @@
     repo: https://github.com/junegunn/fzf.git
     dest: "{{fzf_dir}}"
     depth: 1
+
+- name: Install required python modules
+  pip:
+    name: "{{pip_packages}}"
