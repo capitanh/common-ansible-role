@@ -1,6 +1,6 @@
 name: Release process
 on:
-  push
+  push:
 jobs:
   gradle-release:
     name: Perform gradle release
