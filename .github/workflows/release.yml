@@ -1,6 +1,4 @@
 name: Release process
-env:
-  GTHB_ACCESS_TOKEN: ${{secrets.GTHB_ACCESS_TOKEN}}
 on:
   push:
 jobs:
@@ -8,6 +6,8 @@ jobs:
     name: Perform gradle release
     runs-on: ubuntu-latest
     steps:
+    - env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}      
     - name: Checkout project sources
       uses: actions/checkout@v3
       with:
