@@ -19,17 +19,20 @@ jobs:
       uses: gradle/gradle-build-action@v2
       with:
         gradle-version: 7.6
-    - env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}              
+    - name: Perform gradle release
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       run: gradle release
   galaxy-import:
     name: Publish on Ansible Galaxy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout project sources
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      #- name: Checkout project sources
+      #  env:
+      #    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #  uses: actions/checkout@v3
+      #  with:
+      #    fetch-depth: 0
       - name: Release Ansible Role to Galaxy
         uses: hspaans/ansible-galaxy-action@v1
         with:
