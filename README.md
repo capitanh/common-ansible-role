@@ -30,14 +30,8 @@ It also install following packages:
 * direnv
 * pass
 
-Requirements
-------------
-You will need to export the two following environments variables:
-* GTHB_ACCESS_TOKEN (Personal github access token)
-* ANSIBLE_GALAXY_API_KEY (Personal Galaxy web repo API Key, you can get one here: https://galaxy.ansible.com/me/preferences)
-
-Release process
-------------
+Automatic Release process
+--------------------------
 There is a github action to perform a fully automated release process. Just make sure to provide correct conventional commits message:
 
 ```bash
@@ -49,7 +43,13 @@ The process uses conventional commits to increase version numbers according to t
 * feat: Increase minor
 * BREAKING: Increase mayor
 
-To perform a manual release, after commiting all changes just run:
+Manual Release process
+----------------------
+To perform a manual release, make sure yoy have exportd the two following environment variables:
+* GITHUB_TOKEN (Personal github access token)
+* ANSIBLE_GALAXY_API_KEY (Personal Galaxy web repo API Key, you can get one here: https://galaxy.ansible.com/me/preferences)
+
+after commiting all changes just run:
 ```bash
 gradle release
 ```
