@@ -32,6 +32,6 @@ jobs:
       with:
         fetch-depth: 0      
     - name: Release Ansible Role to Galaxy
-      uses: robertdebock/galaxy-action@1.2.0
+      uses: ansible/ansible-publish-action@v1.0.0
       with:
-        galaxy_api_key: ${{secrets.ANSIBLE_GALAXY_API_KEY}}
+        api_key: ${{secrets.ANSIBLE_GALAXY_API_KEY}}
