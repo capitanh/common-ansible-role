@@ -1,6 +1,6 @@
 //Plugins declaration
 plugins {
-  id "com.mooltiverse.oss.nyx" version "2.4.4"
+  id "com.mooltiverse.oss.nyx" version "2.5.1"
 }
 
 //Global properties
