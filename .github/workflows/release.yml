@@ -26,6 +26,7 @@ jobs:
   galaxy-import:
     name: Publish on Ansible Galaxy
     runs-on: ubuntu-latest
+    needs: gradle-release
     steps:
     - name: Checkout project sources
       uses: actions/checkout@v3
