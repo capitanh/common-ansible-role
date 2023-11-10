@@ -120,6 +120,15 @@
     dest: "{{fzf_dir}}"
     depth: 1
 
+- name: Install yq
+  uri:
+    src: https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+    dest: /usr/local/bin/yq
+    owner: root
+    group: root
+    mode: 0755
+    validate_certs: no
+
 - name: Install required python modules
   pip:
     name: "{{pip_packages}}"
