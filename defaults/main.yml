@@ -7,9 +7,9 @@ admin_password:       admin                     # Admin user password
 fzf_dir:              /usr/local/share/fzf      # fzf source path
 
 tools:
-  procs: "https://github.com/dalance/procs/releases/download/v0.14.4/procs-v0.14.4-x86_64-linux.zip"
-  gdu:   "https://github.com/dundee/gdu/releases/download/v5.25.0/gdu_linux_amd64.tgz"
-  fzf:   "https://github.com/junegunn/fzf/releases/download/0.45.0/fzf-0.45.0-linux_amd64.tar.gz"
+  procs: "https://github.com/dalance/procs/releases/download/v0.14.5/procs-v0.14.5-x86_64-linux.zip"
+  gdu:   "https://github.com/dundee/gdu/releases/download/v5.27.0/gdu_linux_amd64.tgz"
+  fzf:   "https://github.com/junegunn/fzf/releases/download/0.48.1/fzf-0.48.1-linux_amd64.tar.gz"
 
 pip_packages:
   - frogmouth
