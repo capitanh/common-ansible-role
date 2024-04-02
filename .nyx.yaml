@@ -1,8 +1,8 @@
 preset: "extended"
 releasePrefix: v
-#releaseTypes:
-#  enabled: 
-#    - mainline  
+releaseTypes:
+  enabled: 
+    - mainline  
 #  items:
 #    mainline:
 #      collapseVersions: false
@@ -14,8 +14,8 @@ releasePrefix: v
 #      matchBranches: "^(master|main)$"
 #      matchWorkspaceStatus: "CLEAN"
 #      publish: false
-#  publicationServices: 
-#    - github
+  publicationServices: 
+    - github
 services: 
   github: 
     type: "GITHUB"

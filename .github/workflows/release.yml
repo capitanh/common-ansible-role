@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout project sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: Tag repo
@@ -20,7 +20,7 @@ jobs:
         REPOSITORY_NAME: common-ansible-role
         REPOSITORY_OWNER: capitanh        
       with:
-        command: mark
+        command: publish
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
   #  runs-on: ubuntu-latest
