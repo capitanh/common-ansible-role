@@ -15,10 +15,10 @@ jobs:
     - name: Tag repo
       id: nyx
       uses: mooltiverse/nyx-github-action@main
-      env:
-        AUTHENTICATION_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
-        REPOSITORY_NAME: common-ansible-role
-        REPOSITORY_OWNER: capitanh        
+      #env:
+      #  AUTHENTICATION_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #  REPOSITORY_NAME: common-ansible-role
+      #  REPOSITORY_OWNER: capitanh        
       with:
         command: mark
   #galaxy-import:
