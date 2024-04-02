@@ -8,7 +8,7 @@ releaseTypes:
   #    collapseVersions: false
   #    filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
       gitCommit: false
-      gitPush: false
+      gitPush: true
       gitTag: true
   #    gitTagForce: false
   #    matchBranches: "^(master|main)$"
