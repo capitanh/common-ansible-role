@@ -1,0 +1,20 @@
+preset: "extended"
+releasePrefix: v
+releaseTypes:
+  enabled:
+    - mainline
+  publicationServices: 
+    - github    
+  items:
+    mainline:
+      gitCommit: false
+      gitPush: false
+      gitTag: true
+      publish: true
+services: 
+  github: 
+    type: "GITHUB"
+    options: 
+      AUTHENTICATION_TOKEN: {{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}
+      REPOSITORY_NAME: common-ansible-role
+      REPOSITORY_OWNER: capitanh
