@@ -13,13 +13,13 @@ releaseTypes:
   #    gitTagForce: false
   #    matchBranches: "^(master|main)$"
   #    matchWorkspaceStatus: "CLEAN"
-      publish: true    
+      publish: true
   publicationServices: 
     - github
-services: 
-  github: 
-    type: "GITHUB"
-    options: 
-      AUTHENTICATION_TOKEN: "{{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}"
-      REPOSITORY_NAME: "{{#environmentVariable}}REPOSITORY_NAME{{/environmentVariable}}"
-      REPOSITORY_OWNER: "{{#environmentVariable}}REPOSITORY_OWNER{{/environmentVariable}}"
+#services: 
+#  github: 
+#    type: "GITHUB"
+#    options: 
+#      AUTHENTICATION_TOKEN: "{{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}"
+#      REPOSITORY_NAME: "{{#environmentVariable}}REPOSITORY_NAME{{/environmentVariable}}"
+#      REPOSITORY_OWNER: "{{#environmentVariable}}REPOSITORY_OWNER{{/environmentVariable}}"
