@@ -13,9 +13,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Set up Git
-        run: |
-          git config user.email "luis.novo@gmail.com"
-          git config user.name "Luis Novo"
+        run: git config user.email "luis.novo@gmail.com" && git config user.name "Luis Novo"
     - name: Tag repo
       id: nyx
       uses: mooltiverse/nyx-github-action@main
