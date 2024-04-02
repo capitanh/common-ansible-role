@@ -18,8 +18,8 @@ jobs:
         REPOSITORY_NAME: common-ansible-role
         REPOSITORY_OWNER: capitanh
       with:
-        command: 'mark'
-        preset: "extended"
+        command: mark
+        preset: extended
         releasePrefix: v        
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
