@@ -3,17 +3,17 @@ releasePrefix: v
 releaseTypes:
   enabled: 
     - mainline  
-  #items:
-  #  mainline:
+  items:
+    mainline:
   #    collapseVersions: false
   #    filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
-  #    gitCommit: false
-  #    gitPush: false
-  #    gitTag: true
+      gitCommit: false
+      gitPush: false
+      gitTag: true
   #    gitTagForce: false
   #    matchBranches: "^(master|main)$"
   #    matchWorkspaceStatus: "CLEAN"
-  #    publish: true    
+      publish: true    
   publicationServices: 
     - github
 services: 
