@@ -16,10 +16,10 @@ releasePrefix: v
 #      publish: false
 #  publicationServices: 
 #    - github
-#services: 
-#  github: 
-#    type: "GITHUB"
-#    options: 
-#      AUTHENTICATION_TOKEN: "{{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}"
-#      REPOSITORY_NAME: "{{#environmentVariable}}REPOSITORY_NAME{{/environmentVariable}}"
-#      REPOSITORY_OWNER: "{{#environmentVariable}}REPOSITORY_OWNER{{/environmentVariable}}"
+services: 
+  github: 
+    type: "GITHUB"
+    options: 
+      AUTHENTICATION_TOKEN: "{{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}"
+      REPOSITORY_NAME: "{{#environmentVariable}}REPOSITORY_NAME{{/environmentVariable}}"
+      REPOSITORY_OWNER: "{{#environmentVariable}}REPOSITORY_OWNER{{/environmentVariable}}"
