@@ -15,12 +15,8 @@ jobs:
       uses: mooltiverse/nyx-github-action@main
       env:
         AUTHENTICATION_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        REPOSITORY_NAME: common-ansible-role
-        REPOSITORY_OWNER: capitanh
       with:
         command: mark
-        preset: extended
-        releasePrefix: v        
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
   #  runs-on: ubuntu-latest
