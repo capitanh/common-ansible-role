@@ -15,6 +15,6 @@ services:
   github: 
     type: "GITHUB"
     options: 
-      AUTHENTICATION_TOKEN: {{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}
+      AUTHENTICATION_TOKEN: "{{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}"
       REPOSITORY_NAME: common-ansible-role
       REPOSITORY_OWNER: capitanh
