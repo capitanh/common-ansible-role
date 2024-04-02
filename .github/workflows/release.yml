@@ -14,7 +14,9 @@ jobs:
       id: nyx
       uses: mooltiverse/nyx-github-action@main
       env:
-        GH_TOKEN: ${{secrets.GH_TOKEN}}
+        AUTHENTICATION_TOKEN: ${{secrets.GH_TOKEN}}
+        REPOSITORY_NAME: common-ansible-role
+        REPOSITORY_OWNER: capitanh
       with:
         command: 'mark'
         preset: "extended"
