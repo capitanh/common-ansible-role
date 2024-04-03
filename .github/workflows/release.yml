@@ -12,7 +12,7 @@ jobs:
         fetch-depth: 0
     - name: Debug info
       run: |
-        git remote set-url origin https://capitanh:${{secrets.GITHUB_TOKEN}}@github.com/capitanh/common-ansible-role
+        git remote set-url origin https://capitanh:${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/capitanh/common-ansible-role
         git config user.name "Github action"
         git config user.email "github@golili.net"
     - name: Tag repo
