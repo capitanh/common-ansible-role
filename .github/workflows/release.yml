@@ -1,6 +1,8 @@
 name: Release process
 on: 
   push:
+    branches:
+      - master
     tags-ignore:
       - '**'
 jobs:
