@@ -9,26 +9,19 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    #- name: Tag repo
-    #  uses: mooltiverse/nyx-github-action@main
-    #  with:
-    #    command: mark
-    #    stateFile: .nyx-state.json
     - name: Git config
       run: |
         git config user.name "GitHub Action"
         git config user.email "github@golili.net"
-        git remote set-url origin https://capitanh:${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/capitanh/common-ansible-role.git
+        git remote set-url origin https://capitanh:${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/capitanh/common-ansible-role
     - name: Publish release
       uses: mooltiverse/nyx-github-action@main
       env:
-        GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+        AUTHENTICATION_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
         REPOSITORY_NAME: common-ansible-role
         REPOSITORY_OWNER: capitanh
       with:
         command: publish
-        preset: extended
-        releasePrefix: v
         verbosity: DEBUG
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
