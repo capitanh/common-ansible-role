@@ -32,7 +32,7 @@
     - httpie
     - bat
     - micro
-    - exa
+    - eza
     - shellcheck
     - yadm
     - jq

@@ -22,7 +22,7 @@ It also install following packages:
 * httpie
 * bat
 * micro
-* exa
+* eza
 * shellcheck
 * yadm
 * jq
@@ -42,22 +42,6 @@ The process uses conventional commits to increase version numbers according to t
 * fix: Increase patch
 * feat: Increase minor
 * BREAKING: Increase mayor
-
-Manual Release process
-----------------------
-To perform a manual release, make sure yoy have exportd the two following environment variables:
-* GITHUB_TOKEN (Personal github access token)
-* ANSIBLE_GALAXY_API_KEY (Personal Galaxy web repo API Key, you can get one here: https://galaxy.ansible.com/me/preferences)
-
-after commiting all changes just run:
-```bash
-gradle release
-```
-
-Make sure to have ANSIBLE_GALAXY_API_KEY exported environment variable with your personal API Key (https://galaxy.ansible.com/me/preferences), then import the new version into Ansible Galaxy repo:
-```bash
-ansible-galaxy role import -v --token $ANSIBLE_GALAXY_API_KEY --role-name capitanh.common_ansible_role capitanh common-ansible-role
-```
 
 Role Variables
 --------------
