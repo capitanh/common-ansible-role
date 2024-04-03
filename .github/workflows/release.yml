@@ -9,12 +9,11 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    #- name: Tag repo
-    #  uses: mooltiverse/nyx-github-action@main
-    #  with:
-    #    command: mark
-    #    resume: true
-    #    stateFile: .nyx-state.json
+    - name: Tag repo
+      uses: mooltiverse/nyx-github-action@main
+      with:
+        command: mark
+        stateFile: .nyx-state.json
     - name: Publish release
       uses: mooltiverse/nyx-github-action@main
       env:
@@ -23,8 +22,8 @@ jobs:
         REPOSITORY_OWNER: capitanh
       with:
         command: publish
-        #resume: true
-        #stateFile: .nyx-state.json
+        resume: true
+        stateFile: .nyx-state.json
         verbosity: DEBUG
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
