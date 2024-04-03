@@ -8,8 +8,8 @@ releaseTypes:
       #collapseVersions: false
       #filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
       #gitCommit: false
-      #gitPush: true
-      #gitTag: true
+      gitPush: true
+      gitTag: true
       gitTagForce: true
       #matchBranches: "^(master|main)$"
       #matchWorkspaceStatus: "CLEAN"
