@@ -23,8 +23,8 @@ jobs:
       uses: mooltiverse/nyx-github-action@main
       env:
         GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
-        #REPOSITORY_NAME: common-ansible-role
-        #REPOSITORY_OWNER: capitanh
+        REPOSITORY_NAME: common-ansible-role
+        REPOSITORY_OWNER: capitanh
       with:
         command: publish
         preset: extended
