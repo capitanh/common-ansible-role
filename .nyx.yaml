@@ -7,11 +7,11 @@ releaseTypes:
     mainline:
       #collapseVersions: false
       #filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
-      gitCommit: true
-      gitCommitMessage: 'Release version'
+      gitCommit: false
+      #gitCommitMessage: 'Release version'
       gitPush: true
       #gitTag: true
-      #gitTagForce: true
+      gitTagForce: true
       #matchBranches: "^(master|main)$"
       #matchWorkspaceStatus: "CLEAN"
       publish: true
