@@ -1,5 +1,8 @@
 name: Release process
-on: push
+on: 
+  push:
+    tags-ignore:
+      - *
 jobs:
   release:
     name: Perform release
@@ -22,17 +25,17 @@ jobs:
         REPOSITORY_OWNER: capitanh
       with:
         command: publish
-        verbosity: DEBUG
-  #galaxy-import:
-  #  name: Publish on Ansible Galaxy
-  #  runs-on: ubuntu-latest
-  #  needs: gradle-release
-  #  steps:
-  #  - name: Checkout project sources
-  #    uses: actions/checkout@v3
-  #    with:
-  #      fetch-depth: 0
-  #  - name: Release Ansible Role to Galaxy
-  #    uses: hspaans/ansible-galaxy-action@v1
-  #    with:
-  #      api_key: ${{secrets.ANSIBLE_GALAXY_API_KEY}}
+        #verbosity: DEBUG
+  galaxy-import:
+    name: Publish on Ansible Galaxy
+    runs-on: ubuntu-latest
+    needs: gradle-release
+    steps:
+    - name: Checkout project sources
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Release Ansible Role to Galaxy
+      uses: hspaans/ansible-galaxy-action@v1
+      with:
+        api_key: ${{secrets.ANSIBLE_GALAXY_API_KEY}}
