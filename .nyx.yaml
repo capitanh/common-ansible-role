@@ -9,8 +9,8 @@ releaseTypes:
       #filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
       #gitCommit: false
       #gitCommitMessage: 'Release version'
-      #gitPush: true
-      #gitTag: true
+      gitPush: true
+      gitTag: true
       gitTagForce: true
       #matchBranches: "^(master|main)$"
       #matchWorkspaceStatus: "CLEAN"
