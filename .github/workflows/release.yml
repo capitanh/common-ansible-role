@@ -25,6 +25,7 @@ jobs:
         command: publish
         resume: true
         stateFile: .nyx-state.json
+        verbosity: DEBUG
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
   #  runs-on: ubuntu-latest
