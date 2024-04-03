@@ -14,13 +14,13 @@ jobs:
       id: nyx
       uses: mooltiverse/nyx-github-action@main
       env:
-        NYX_VERBOSITY: 'DEBUG'
       #  AUTHENTICATION_TOKEN: ${{secrets.GITHUB_TOKEN}}
       #  REPOSITORY_NAME: common-ansible-role
       #  REPOSITORY_OWNER: capitanh
       with:
         preset: 'extended'
         releasePrefix: v
+        verbosity: DEBUG
         command: mark
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
