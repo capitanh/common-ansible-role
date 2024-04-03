@@ -5,7 +5,14 @@ releaseTypes:
     - mainline  
   items:
     mainline:
+      #collapseVersions: false
+      #filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
+      #gitCommit: false
+      gitPush: true
+      gitTag: true
       gitTagForce: true
+      #matchBranches: "^(master|main)$"
+      #matchWorkspaceStatus: "CLEAN"
       publish: true
   publicationServices: 
     - github
