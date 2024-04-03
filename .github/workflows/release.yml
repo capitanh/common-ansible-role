@@ -13,13 +13,14 @@ jobs:
     - name: Tag repo
       id: nyx
       uses: mooltiverse/nyx-github-action@main
-      #env:
+      env:
+        NYX_VERBOSITY: 'DEBUG'
       #  AUTHENTICATION_TOKEN: ${{secrets.GITHUB_TOKEN}}
       #  REPOSITORY_NAME: common-ansible-role
-      #  REPOSITORY_OWNER: capitanh        
+      #  REPOSITORY_OWNER: capitanh
       with:
-        preset: "extended"
-        releasePrefix: v        
+        preset: 'extended'
+        releasePrefix: v
         command: mark
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
@@ -29,7 +30,7 @@ jobs:
   #  - name: Checkout project sources
   #    uses: actions/checkout@v3
   #    with:
-  #      fetch-depth: 0      
+  #      fetch-depth: 0
   #  - name: Release Ansible Role to Galaxy
   #    uses: hspaans/ansible-galaxy-action@v1
   #    with:
