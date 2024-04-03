@@ -13,6 +13,8 @@ jobs:
       uses: mooltiverse/nyx-github-action@main
       with:
         command: mark
+        resume: true
+        stateFile: .nyx-state.json
     - name: Publish release
       uses: mooltiverse/nyx-github-action@main
       env:
@@ -21,6 +23,8 @@ jobs:
         REPOSITORY_OWNER: capitanh
       with:
         command: publish
+        resume: true
+        stateFile: .nyx-state.json
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
   #  runs-on: ubuntu-latest
