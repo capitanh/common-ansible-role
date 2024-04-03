@@ -2,7 +2,7 @@ name: Release process
 on: 
   push:
     tags-ignore:
-      - *
+      - '**'
 jobs:
   release:
     name: Perform release
