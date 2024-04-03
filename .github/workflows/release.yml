@@ -17,9 +17,9 @@ jobs:
     - name: Publish release
       uses: mooltiverse/nyx-github-action@main
       env:
-        AUTHENTICATION_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        REPOSITORY_NAME: common-ansible-role
-        REPOSITORY_OWNER: capitanh
+        GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+        #REPOSITORY_NAME: common-ansible-role
+        #REPOSITORY_OWNER: capitanh
       with:
         command: publish
         resume: true
