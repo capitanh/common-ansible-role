@@ -1,6 +1,5 @@
 name: Release process
-on:
-  push:
+on: push
 jobs:
   release:
     name: Perform release
