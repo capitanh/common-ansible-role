@@ -5,6 +5,8 @@ on:
       - master
     tags-ignore:
       - '**'
+permissions:
+  content: write
 jobs:
   release:
     name: Perform release
@@ -22,7 +24,7 @@ jobs:
     - name: Publish release
       uses: mooltiverse/nyx-github-action@main
       env:
-        AUTHENTICATION_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+        AUTHENTICATION_TOKEN: ${{secrets.GITHUB_TOKEN}}
         REPOSITORY_NAME: common-ansible-role
         REPOSITORY_OWNER: capitanh
       with:
