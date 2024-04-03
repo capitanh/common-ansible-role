@@ -1,5 +1,11 @@
 preset: "extended"
 releasePrefix: v
+git:
+  remotes:
+    origin:
+      authenticationMethod: USER_PASSWORD
+      user: "{{#environmentVariable}}REPOSITORY_OWNER{{/environmentVariable}}"
+      password: "{{#environmentVariable}}AUTHENTICATION_TOKEN{{/environmentVariable}}"
 releaseTypes:
   enabled: 
     - mainline  
