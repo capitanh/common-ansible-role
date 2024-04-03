@@ -13,7 +13,7 @@ releaseTypes:
       gitTagForce: true
       #matchBranches: "^(master|main)$"
       #matchWorkspaceStatus: "CLEAN"
-      #publish: false
+      publish: true
   publicationServices: 
     - github
 services: 
