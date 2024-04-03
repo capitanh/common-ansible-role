@@ -19,6 +19,15 @@ jobs:
       #  REPOSITORY_OWNER: capitanh
       with:
         command: mark
+    - name: Publish release
+      id: nyx
+      uses: mooltiverse/nyx-github-action@main
+      env:
+        AUTHENTICATION_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+        REPOSITORY_NAME: common-ansible-role
+        REPOSITORY_OWNER: capitanh
+      with:
+        command: publish
   #galaxy-import:
   #  name: Publish on Ansible Galaxy
   #  runs-on: ubuntu-latest
