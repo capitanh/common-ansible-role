@@ -5,15 +5,15 @@ releaseTypes:
     - mainline  
   items:
     mainline:
-      collapseVersions: false
-      filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
-      gitCommit: false
-      gitPush: true
-      gitTag: true
+      #collapseVersions: false
+      #filterTags: "^v(\\d+)\\.(\\d+)\\.(\\d+)$"
+      #gitCommit: false
+      #gitPush: true
+      #gitTag: true
       gitTagForce: true
-      matchBranches: "^(master|main)$"
-      matchWorkspaceStatus: "CLEAN"
-      publish: false
+      #matchBranches: "^(master|main)$"
+      #matchWorkspaceStatus: "CLEAN"
+      #publish: false
   publicationServices: 
     - github
 services: 
