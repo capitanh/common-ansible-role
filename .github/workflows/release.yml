@@ -14,6 +14,10 @@ jobs:
     #  with:
     #    command: mark
     #    stateFile: .nyx-state.json
+    . name: Git config
+      run: |
+        git config user.name "GitHub Action"
+        git config user.email "github@golili.net"
     - name: Publish release
       uses: mooltiverse/nyx-github-action@main
       env:
