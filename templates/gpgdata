@@ -1,0 +1,11 @@
+Key-Type: eddsa
+Key-Curve: Ed25519
+Subkey-Type: ecdh
+Subkey-Curve: Curve25519
+Name-Real: {{admin_user}}
+Name-Email: {{admin_user}}@localhost
+Expire-Date: 0
+Passphrase: notused
+%no-ask-passphrase
+%no-protection
+%commit

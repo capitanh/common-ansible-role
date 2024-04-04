@@ -1,0 +1,90 @@
+---
+- name: Install delta .deb package
+  ansible.builtin.apt:
+    deb: https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_amd64.deb
+
+- name: Copy config files
+  copy:
+    src: "{{item}}"
+    dest: "/home/{{admin_user}}/.{{item}}"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+  with_items:
+    - tmux.conf
+    - gitconfig
+    - gitignore
+
+- name: Make sure config folders exist
+  file:
+    path: "/home/{{admin_user}}/.config/{{item}}"
+    state: directory
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0755
+  with_items:
+    - micro
+    - lfm
+    - bat
+
+- name: Copy micro editor settings
+  copy:
+    src: micro-settings.json
+    dest: "/home/{{admin_user}}/.config/micro/settings.json"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
+- name: Copy lfm file manager settings
+  copy:
+    src: lfm.ini
+    dest: "/home/{{admin_user}}/.config/lfm/lfm.ini"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
+- name: Copy bat settings
+  copy:
+    src: batconfig
+    dest: "/home/{{admin_user}}/.config/bat/config"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
+- name: Copy command alternatives
+  copy:
+    src: "{{item}}"
+    dest: /usr/local/bin/
+    mode: 0755
+  with_items:
+    - hr
+
+- name: Install tools
+  unarchive:
+    src: "{{item.value}}"
+    dest: /usr/local/bin/
+    remote_src: yes
+    validate_certs: no
+    owner: root
+    group: root
+    mode: 0755
+  with_dict: "{{tools}}"
+
+- name: Donwload fzf extra stuff
+  git:
+    repo: https://github.com/junegunn/fzf.git
+    dest: "{{fzf_dir}}"
+    depth: 1
+
+- name: Install yq
+  get_url:
+    url: https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+    dest: /usr/local/bin/yq
+    owner: root
+    group: root
+    mode: 0755
+    validate_certs: no
+
+#- name: Install required python modules
+#  community.general.pipx:
+#    name: "{{pip_packages}}"

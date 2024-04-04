@@ -1,0 +1,74 @@
+---
+- name: Set timezone to Europe/Madrid
+  community.general.timezone:
+    name: Europe/Madrid
+
+- name: Create user
+  user:
+    name: "{{admin_user}}"
+    password: "{{admin_password|password_hash('sha512')}}"
+    state: present
+    generate_ssh_key: yes
+    update_password: always
+    shell: /bin/zsh
+
+- name: Add admin user to sudoers
+  template:
+    src: admin_sudoers
+    dest: "/etc/sudoers.d/{{admin_user}}"
+    owner: root
+    group: root
+    mode: 0440
+
+- name: Add locales
+  locale_gen:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - en_US.UTF-8
+    - es_ES.UTF-8
+
+- name: Copy locales file
+  copy:
+    src: locale
+    dest: /etc/default/locale
+
+- name: Set motd
+  copy:
+    src: motd
+    dest: /etc
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Copy multipath.conf
+  copy:
+    src: multipath.conf
+    dest: /etc
+  notify: Restart multipath-tools
+
+- name: Install base packages
+  apt:
+    name: "{{packages}}"
+    state: present
+    update_cache: yes
+  vars:
+    packages: "{{extra_packages}}"
+
+- name: Transfer gpg data
+  template:
+    src: gpgdata
+    dest: /tmp/gpgdata
+
+- name: Generate gpg key
+  command: "gpg --gen-key --batch /tmp/gpgdata"
+  become_user: "{{admin_user}}"
+
+- name: Get GPG Key ID
+  shell: gpg --list-key | grep -A 1 pub | tail -1 | xargs
+  register: GPG_INFO
+  become_user: "{{admin_user}}"
+
+- name: Init pass store
+  command: "pass init {{GPG_INFO.stdout}}"
+  become_user: "{{admin_user}}"
