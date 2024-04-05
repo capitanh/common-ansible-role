@@ -1,4 +1,4 @@
-[![.github/workflows/workflow.yml](https://github.com/capitanh/common-ansible-role/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/capitanh/common-ansible-role/actions/workflows/workflow.yml) 
+[![.github/workflows/release.yml](https://github.com/capitanh/common-ansible-role/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/capitanh/common-ansible-role/actions/workflows/release.yml) 
 [![](https://img.shields.io/badge/powered%20by-Nyx-blue)](https://github.com/mooltiverse/nyx)
 
 General utilities ansible role
