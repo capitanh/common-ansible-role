@@ -1,3 +1,4 @@
+[![](https://img.shields.io/badge/powered%20by-Nyx-blue)](https://github.com/mooltiverse/nyx)
 General utilities ansible role
 =========
 Used to bootstrap config of every new host. It performs the following tasks:
