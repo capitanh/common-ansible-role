@@ -8,9 +8,10 @@ fzf_dir:              /usr/local/share/fzf      # fzf source path
 ###############################################################################
 # Tools archives from Github
 tools:
-  procs: "https://github.com/dalance/procs/releases/download/v0.14.5/procs-v0.14.5-x86_64-linux.zip"
-  gdu:   "https://github.com/dundee/gdu/releases/download/v5.27.0/gdu_linux_amd64.tgz"
-  fzf:   "https://github.com/junegunn/fzf/releases/download/0.48.1/fzf-0.48.1-linux_amd64.tar.gz"
+  procs:  "https://github.com/dalance/procs/releases/download/v0.14.5/procs-v0.14.5-x86_64-linux.zip"
+  gdu:    "https://github.com/dundee/gdu/releases/download/v5.27.0/gdu_linux_amd64.tgz"
+  fzf:    "https://github.com/junegunn/fzf/releases/download/0.48.1/fzf-0.48.1-linux_amd64.tar.gz"
+  zellij: "https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz"
 
 ###############################################################################
 # Apps to install via pip/pipx
