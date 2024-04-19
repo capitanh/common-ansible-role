@@ -92,8 +92,8 @@
 - name: Install dysk
   unarchive:
     src: https://github.com/Canop/dysk/releases/download/v2.8.2/dysk_2.8.2.zip
-    dest: /usr/local/bin/
-    creates: /usr/local/bin/k9s
+    dest: /usr/local/bin/dysk
+    creates: /usr/local/bin/dysk
     owner: root
     group: root
     mode: 0755    
