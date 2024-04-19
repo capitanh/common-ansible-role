@@ -94,10 +94,9 @@
     src: https://github.com/Canop/dysk/releases/download/v2.8.2/dysk_2.8.2.zip
     dest: /usr/local/bin/
     creates: /usr/local/bin/dysk
-    owner: root
-    group: root
-    mode: 0755    
     include:
     - build/x86_64-linux/dysk
     remote_src: yes
     validate_certs: no
+    extra_opts:
+    - -j
