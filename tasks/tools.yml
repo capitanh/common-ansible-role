@@ -85,6 +85,19 @@
     mode: 0755
     validate_certs: no
 
-#- name: Install required python modules
-#  community.general.pipx:
-#    name: "{{pip_packages}}"
+- name: Install required python modules
+  pip:
+    name: "{{pip_packages}}"
+
+- name: Install dysk
+  unarchive:
+    src: https://github.com/Canop/dysk/releases/download/v2.8.2/dysk_2.8.2.zip
+    dest: /usr/local/bin/
+    creates: /usr/local/bin/k9s
+    owner: root
+    group: root
+    mode: 0755    
+    include:
+    - /build/x86_64-linux/dysk
+    remote_src: yes
+    validate_certs: no
