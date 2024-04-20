@@ -26,6 +26,7 @@
     - micro
     - lfm
     - bat
+    - lnav
 
 - name: Copy micro editor settings
   copy:
@@ -47,6 +48,14 @@
   copy:
     src: batconfig
     dest: "/home/{{admin_user}}/.config/bat/config"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
+- name: Copy lnav settings
+  copy:
+    src: lnav_config.json
+    dest: "/home/{{admin_user}}/.config/lnav/config.json"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     mode: 0644
