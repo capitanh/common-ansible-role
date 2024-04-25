@@ -94,6 +94,11 @@
     mode: 0755
     validate_certs: no
 
+- name: Upgrade pip
+  pip:
+    name: pip
+    extra_args: --upgrade
+
 - name: Install required python modules
   pip:
     name: "{{pip_packages}}"
