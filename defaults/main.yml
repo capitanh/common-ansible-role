@@ -10,7 +10,7 @@ fzf_dir:              /usr/local/share/fzf      # fzf source path
 tools:
   procs:  "https://github.com/dalance/procs/releases/download/v0.14.5/procs-v0.14.5-x86_64-linux.zip"
   gdu:    "https://github.com/dundee/gdu/releases/download/v5.29.0/gdu_linux_amd64.tgz"
-  fzf:    "https://github.com/junegunn/fzf/releases/download/0.54.0/fzf-0.54.0-linux_amd64.tar.gz"
+  fzf:    "https://github.com/junegunn/fzf/releases/download/v0.54.0/fzf-0.54.0-linux_amd64.tar.gz"
   zellij: "https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz"
   eza:    "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
 
