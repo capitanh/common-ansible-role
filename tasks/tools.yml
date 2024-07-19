@@ -99,9 +99,9 @@
 #    name: pip
 #    extra_args: --upgrade
 
-#- name: Install required python modules
-#  pip:
-#    name: "{{pip_packages}}"
+- name: Install required python modules
+  community.general.pipx:
+    name: "{{pip_packages}}"
 
 - name: Install dysk
   unarchive:
