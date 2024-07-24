@@ -97,10 +97,10 @@
 - name: Upgrade pip
   community.general.pipx:
     name: pip
-    extra_args: --upgrade
+    state: upgrade
 
 - name: Install required python modules
-  community.general.pipx:
+  pip:
     name: "{{pip_packages}}"
 
 - name: Install dysk
