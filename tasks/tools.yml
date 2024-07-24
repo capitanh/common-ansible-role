@@ -101,7 +101,7 @@
 #
 - name: Install required python modules
   community.general.pipx:
-    name: "{{pip_packages}}"
+    name: frogmouth
 
 - name: Install dysk
   unarchive:
