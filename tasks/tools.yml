@@ -94,14 +94,14 @@
     mode: 0755
     validate_certs: no
 
-- name: Upgrade pip
-  community.general.pipx:
-    name: pip
-    state: upgrade
-
-- name: Install required python modules
-  pip:
-    name: "{{pip_packages}}"
+#- name: Upgrade pip
+#  community.general.pipx:
+#    name: pip
+#    state: upgrade
+#
+#- name: Install required python modules
+#  pip:
+#    name: "{{pip_packages}}"
 
 - name: Install dysk
   unarchive:
