@@ -94,11 +94,6 @@
     mode: 0755
     validate_certs: no
 
-#- name: Upgrade pip
-#  community.general.pipx:
-#    name: pip
-#    state: upgrade
-#
 - name: Install required python modules
   community.general.pipx:
     name: "{{item}}"
