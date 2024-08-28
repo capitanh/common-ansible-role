@@ -98,7 +98,6 @@
   community.general.pipx:
     name: "{{item}}"
   with_items: "{{pip_packages}}"
-  become_user: "{admin_user}"
 
 - name: Install dysk
   unarchive:
