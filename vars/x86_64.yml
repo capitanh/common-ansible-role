@@ -1,0 +1,11 @@
+# Tools archives from Github
+tools:
+  procs:  "https://github.com/dalance/procs/releases/download/v{{procs_version}}/procs-v{{procs_version}}-x86_64-linux.zip"
+  gdu:    "https://github.com/dundee/gdu/releases/latest/download/gdu_linux_amd64.tgz"
+  fzf:    "https://github.com/junegunn/fzf/releases/download/v{{fzf_version}}/fzf-{{fzf_version}}-linux_amd64.tar.gz"
+  zellij: "https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz"
+  eza:    "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
+
+# Other tools
+delta_url: "https://github.com/dandavison/delta/releases/download/{{delta_version}}/git-delta_{{delta_version}}_amd64.deb"
+yq_url: https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64

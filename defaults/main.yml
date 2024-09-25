@@ -6,24 +6,15 @@ admin_password:       admin                     # Admin user password
 fzf_dir:              /usr/local/share/fzf      # fzf source path
 
 ###############################################################################
-# Tools archives from Github
-#tools:
-#  procs:  "https://github.com/dalance/procs/releases/download/v0.14.6/procs-v0.14.6-x86_64-linux.zip"
-#  gdu:    "https://github.com/dundee/gdu/releases/download/v5.29.0/gdu_linux_amd64.tgz"
-#  fzf:    "https://github.com/junegunn/fzf/releases/download/v0.54.3/fzf-0.54.3-linux_amd64.tar.gz"
-#  zellij: "https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz"
-#  eza:    "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
-
-tools:
-  gdu:    "https://github.com/dundee/gdu/releases/download/v5.29.0/gdu_linux_arm64.tgz"
-  fzf:    "https://github.com/junegunn/fzf/releases/download/v0.55.0/fzf-0.55.0-linux_arm64.tar.gz"
-  zellij: "https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz"
-  eza:    "https://github.com/eza-community/eza/releases/latest/download/eza_arm-unknown-linux-gnu.tar.gz"
-
-###############################################################################
 # Apps to install via pip/pipx
 pip_packages:
 - frogmouth
+
+###############################################################################
+# Tools versions
+procs_version: 0.14.6
+fzf_version: 0.55.0
+delta_version: 0.18.2
 
 ###############################################################################
 # Extra packages and tools
@@ -48,3 +39,4 @@ extra_packages:
 - direnv
 - pass
 - pipx
+- gdu
