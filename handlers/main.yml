@@ -3,8 +3,3 @@
   service:
     name: ssh
     state: restarted
-
-- name: Restart multipath-tools
-  service:
-    name: multipath-tools
-    state: restarted

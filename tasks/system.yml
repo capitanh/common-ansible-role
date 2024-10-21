@@ -41,12 +41,6 @@
     group: root
     mode: 0644
 
-- name: Copy multipath.conf
-  copy:
-    src: multipath.conf
-    dest: /etc
-  notify: Restart multipath-tools
-
 - name: Install base packages
   apt:
     name: "{{packages}}"
