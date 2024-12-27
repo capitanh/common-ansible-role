@@ -15,7 +15,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Publish release
-      uses: mooltiverse/nyx-github-action@main
+      uses: mooltiverse/nyx@main
       env:
         AUTHENTICATION_TOKEN: ${{secrets.GITHUB_TOKEN}}
         REPOSITORY_NAME: common-ansible-role
