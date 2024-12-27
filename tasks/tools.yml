@@ -13,7 +13,7 @@
   with_items:
     - tmux.conf
     - gitconfig
-    - gitignore
+    - gitignore_global
 
 - name: Make sure config folders exist
   file:

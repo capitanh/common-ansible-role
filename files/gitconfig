@@ -8,12 +8,16 @@
 [core]
   editor = micro
   pager = delta
-  excludesFile = ~/.gitignore
+  excludesFile = ~/.gitignore_global
 [alias]
   co = checkout
   br = branch
   st = status
-[delta]
-  side-by-side = true
 [interactive]
   diffFilter = delta --color-only --features=interactive
+[delta]
+  navigate = true     # Use n and N to move between diff sections
+  ligjht = false      # Set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  side-by-side = true
+[merge]
+  conflictstyle = diff3
