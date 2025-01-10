@@ -40,4 +40,4 @@ extra_packages:
 - pass
 - pipx
 - gdu
-- nvim
+- neovim
