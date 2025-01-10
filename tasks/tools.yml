@@ -120,7 +120,8 @@
 
 - name: Copy lazyvim color scheme
   copy:
-    src: colorcheme.lua
+    src: colorscheme.lua
     dest: "/home/{{admin_user}}/.config/nvim/lua/plugins"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
+    mode: 0644
