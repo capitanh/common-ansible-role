@@ -110,3 +110,17 @@
 #    validate_certs: no
 #    extra_opts:
 #    - -j
+
+- name: Install lazyvim
+  ansible.builtin.git:
+    repo: https://github.com/LazyVim/starter
+    dest: "/home/{{admin_user}}/.config/nvim"
+  become: yes
+  become_user: "{{admin_user}}"
+
+- name: Copy lazyvim color scheme
+  copy:
+    src: colorcheme.lua
+    dest: "/home/{{admin_user}}/.config/nvim/lua/plugins"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
