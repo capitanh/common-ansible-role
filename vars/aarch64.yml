@@ -3,6 +3,7 @@ tools:
   fzf:    "https://github.com/junegunn/fzf/releases/download/v{{fzf_version}}/fzf-{{fzf_version}}-linux_arm64.tar.gz"
   zellij: "https://github.com/zellij-org/zellij/releases/latest/download/zellij-aarch64-unknown-linux-musl.tar.gz"
   eza:    "https://github.com/eza-community/eza/releases/latest/download/eza_arm-unknown-linux-gnueabihf.tar.gz"
+  lazygit: "https://github.com/jesseduffield/lazygit/releases/download/v{{lazygit_version}}/lazygit_{{lazygit_version}}_Linux_arm64.tar.gz"
 
 # Other tools
 delta_url: "https://github.com/dandavison/delta/releases/download/{{delta_version}}/git-delta_{{delta_version}}_arm64.deb"

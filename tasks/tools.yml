@@ -118,6 +118,11 @@
   become: yes
   become_user: "{{admin_user}}"
 
+- name: Remove .git from LazyVim installation
+  file:
+    path: "/home/{{admin_user}}/.config/nvim/.git"
+    state: absent
+
 - name: Copy lazyvim color scheme
   copy:
     src: colorscheme.lua
