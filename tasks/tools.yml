@@ -111,6 +111,11 @@
 #    extra_opts:
 #    - -j
 
+- name: Remove lazynvim dir if previously installed
+  file:
+    path: "/home/{{admin_user}}/.config/nvim"
+    state: absent
+    
 - name: Install lazyvim
   ansible.builtin.git:
     repo: https://github.com/LazyVim/starter
