@@ -115,9 +115,9 @@
   ansible.builtin.git:
     repo: https://github.com/LazyVim/starter
     dest: "/home/{{admin_user}}/.config/nvim"
+    creates: "/home/{{admin_user}}/.config/nvim"
   become: yes
   become_user: "{{admin_user}}"
-  creates: "/home/{{admin_user}}/.config/nvim"
 
 - name: Remove .git from LazyVim installation
   file:
