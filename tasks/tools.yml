@@ -115,7 +115,7 @@
   ansible.builtin.git:
     repo: https://github.com/LazyVim/starter
     dest: "/home/{{admin_user}}/.config/nvim"
-    creates: "/home/{{admin_user}}/.config/nvim"
+    update: no
   become: yes
   become_user: "{{admin_user}}"
 
