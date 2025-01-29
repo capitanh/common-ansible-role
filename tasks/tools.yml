@@ -27,6 +27,7 @@
     - lfm
     - bat
     - lnav
+    - eza
 
 - name: Copy micro editor settings
   copy:
@@ -59,6 +60,14 @@
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     mode: 0644
+
+- name: Copy eza theme
+  copy:
+    src: eza-theme.yml
+    dest: "/home/{{admin_user}}/.config/eza/theme.yml"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644    
 
 - name: Copy command alternatives
   copy:
@@ -129,10 +138,13 @@
     path: "/home/{{admin_user}}/.config/nvim/.git"
     state: absent
 
-- name: Copy lazyvim color scheme
+- name: Copy lazyvim plugins config
   copy:
-    src: colorscheme.lua
+    src: "{{item}}"
     dest: "/home/{{admin_user}}/.config/nvim/lua/plugins"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     mode: 0644
+  with_items:
+  - colorscheme.lua
+  - neo-tree.lua

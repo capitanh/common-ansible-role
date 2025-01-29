@@ -1,0 +1,34 @@
+colourful: true
+
+filekinds:
+  executable:
+    is_bold: false
+    is_dimmed: true
+  symlink: 
+    is_italic: true
+
+perms:
+  user_read: {foreground: "#BCBCBC", is_bold: false}
+  user_write: {foreground: "#BCBCBC", is_bold: false}
+  user_execute_file: {foreground: "#BCBCBC", is_underline: false, is_bold: false}
+  user_execute_other: {foreground: "#BCBCBC", is_bold: false}
+  group_read: {foreground: "#8A8A8A", is_bold: false}
+  group_write: {foreground: "#8A8A8A", is_bold: false}
+  group_execute: {foreground: "#8A8A8A", is_bold: false}
+  other_read: {foreground: "#585858", is_bold: false}
+  other_write: {foreground: "#585858", is_bold: false}
+  other_execute: {foreground: "#585858", is_bold: false}
+
+users:
+  user_you: {foreground: "#5F5F87", is_bold: false}
+  user_other: {foreground: "#6C6C6C", is_bold: false}
+  group_yours: {foreground: "#5F5F87", is_bold: false}
+  group_other: {foreground: "#6C6C6C", is_bold: false}
+  user_root: {foreground: "#af00ff", is_bold: true}
+  group_root: {foreground: "#af00ff", is_bold: true}
+
+date: {foreground: "#EEEEEE"}
+
+git_repo:
+  branch_main: {foreground: "#5F5F87", is_dimmed: true}
+  branch_other: {foreground: "#5F5F87"}
