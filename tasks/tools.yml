@@ -88,11 +88,11 @@
     mode: 0755
   with_dict: "{{tools}}"
 
-- name: Donwload fzf extra stuff
-  git:
-    repo: https://github.com/junegunn/fzf.git
-    dest: "{{fzf_dir}}"
-    depth: 1
+#- name: Donwload fzf extra stuff
+#  git:
+#    repo: https://github.com/junegunn/fzf.git
+#    dest: "{{fzf_dir}}"
+#    depth: 1
 
 - name: Install yq
   get_url:
