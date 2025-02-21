@@ -28,6 +28,7 @@
     - bat
     - lnav
     - eza
+    - lazygit
 
 - name: Copy micro editor settings
   copy:
@@ -57,6 +58,14 @@
   copy:
     src: lnav_config.json
     dest: "/home/{{admin_user}}/.config/lnav/config.json"
+    owner: "{{admin_user}}"
+    group: "{{admin_user}}"
+    mode: 0644
+
+- name: Copy lazygit settings
+  copy:
+    src: lazygit-config.yml
+    dest: "/home/{{admin_user}}/.config/lazygit/config.yml"
     owner: "{{admin_user}}"
     group: "{{admin_user}}"
     mode: 0644
