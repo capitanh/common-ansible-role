@@ -17,7 +17,7 @@
   diffFilter = delta --color-only --features=interactive
 [delta]
   navigate = true     # Use n and N to move between diff sections
-  ligjht = false      # Set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  light = false      # Set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
   side-by-side = true
 [merge]
   conflictstyle = diff3
