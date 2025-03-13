@@ -42,3 +42,4 @@ extra_packages:
 - pipx
 - gdu
 - neovim
+- zoxide
