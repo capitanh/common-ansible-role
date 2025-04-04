@@ -97,12 +97,6 @@
     mode: 0755
   with_dict: "{{tools}}"
 
-#- name: Donwload fzf extra stuff
-#  git:
-#    repo: https://github.com/junegunn/fzf.git
-#    dest: "{{fzf_dir}}"
-#    depth: 1
-
 - name: Install yq
   get_url:
     url: "{{yq_url}}"
@@ -129,7 +123,20 @@
 #    extra_opts:
 #    - -j
 
-- name: Remove lazynvim dir if previously installed
+###############################################################################
+# NeoVim / LazyVim
+- name: Install neovim
+  unarchive:
+    src: "{{neovim_url}}"
+    dest: /opt/
+    remote_src: yes
+    validate_certs: no
+    owner: root
+    group: root
+    mode: 0755
+    creates: /opt/nvim-linux-x86_64
+
+- name: Remove lazyvim dir if previously installed
   file:
     path: "/home/{{admin_user}}/.config/nvim"
     state: absent
@@ -156,4 +163,5 @@
     mode: 0644
   with_items:
   - colorscheme.lua
-  - neo-tree.lua
+  #- neo-tree.lua
+  - rip-substitute.lua

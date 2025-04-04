@@ -8,3 +8,4 @@ tools:
 # Other tools
 delta_url: "https://github.com/dandavison/delta/releases/download/{{delta_version}}/git-delta_{{delta_version}}_arm64.deb"
 yq_url: https://github.com/mikefarah/yq/releases/download/v4.44.3/yq_linux_arm64
+neovim_url: https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-arm64.tar.gz

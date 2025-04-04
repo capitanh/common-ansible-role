@@ -41,5 +41,5 @@ extra_packages:
 - pass
 - pipx
 - gdu
-- neovim
 - zoxide
+- ripgrep
