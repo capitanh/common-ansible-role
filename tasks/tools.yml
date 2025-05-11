@@ -136,7 +136,7 @@
     mode: 0755
     creates: /opt/nvim-linux-x86_64
 
-- name: Remove lazyvim dir if previously installed
+- name: Remove nvim dir if previously installed
   file:
     path: "/home/{{admin_user}}/.config/nvim"
     state: absent
