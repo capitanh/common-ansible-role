@@ -3,7 +3,7 @@
   unarchive:
     src: "https://github.com/dandavison/delta/releases/download/{{delta_version}}/delta-{{delta_version}}-x86_64-unknown-linux-gnu.tar.gz"
     dest: /usr/local/bin/
-    include: /delta-{{delta_version}}-x86_64-unknown-linux-gnu/delta
+    include: delta-{{delta_version}}-x86_64-unknown-linux-gnu/delta
     remote_src: yes
     validate_certs: no
     owner: root
