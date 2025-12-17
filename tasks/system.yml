@@ -42,7 +42,8 @@
     mode: 0644
 
 - name: Install base packages
-  apt:
+  #apt:
+  package:
     name: "{{packages}}"
     state: present
     update_cache: yes
