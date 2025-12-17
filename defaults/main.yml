@@ -29,7 +29,6 @@ extra_packages:
 - unzip
 - lnav
 - pydf
-- lfm
 - httpie
 - bat
 - micro
