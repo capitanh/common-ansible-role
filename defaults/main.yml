@@ -37,9 +37,9 @@ extra_packages:
 - jq
 #- python3-pip
 - python-pip
+- python-pipx
 - direnv
 - pass
-- pipx
 - gdu
 - zoxide
 - ripgrep
