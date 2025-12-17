@@ -35,7 +35,6 @@ extra_packages:
 - shellcheck
 - yadm
 - jq
-#- python3-pip
 - python-pip
 - python-pipx
 - direnv
@@ -43,3 +42,4 @@ extra_packages:
 - gdu
 - zoxide
 - ripgrep
+- gcc
