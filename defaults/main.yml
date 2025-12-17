@@ -13,8 +13,8 @@ pip_packages:
 ###############################################################################
 # Tools versions
 procs_version: 0.14.10
-fzf_version: 0.66.1
-lazygit_version: 0.56.0
+fzf_version: 0.67.0
+lazygit_version: 0.57.0
 
 ###############################################################################
 # Extra packages and tools
