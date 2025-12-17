@@ -35,7 +35,8 @@ extra_packages:
 - shellcheck
 - yadm
 - jq
-- python3-pip
+#- python3-pip
+- python-pip
 - direnv
 - pass
 - pipx
