@@ -158,6 +158,6 @@
     group: "{{admin_user}}"
     mode: 0644
   with_items:
-  - colorscheme.lua
-  #- neo-tree.lua
+  - onedark.lua
+  - nord.lua
   - rip-substitute.lua
