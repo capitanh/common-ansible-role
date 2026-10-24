@@ -49,3 +49,4 @@ extra_packages:
 - eza
 - lazygit
 - yq
+- nvim
