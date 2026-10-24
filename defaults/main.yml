@@ -43,3 +43,9 @@ extra_packages:
 - zoxide
 - ripgrep
 - gcc
+- procs
+- gdu
+- fzf
+- eza
+- lazygit
+- yq

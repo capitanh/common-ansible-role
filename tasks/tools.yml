@@ -82,30 +82,30 @@
   with_items:
   - hr
 
-- name: Install tools
-  unarchive:
-    src: "{{item.value}}"
-    dest: /usr/local/bin/
-    remote_src: yes
-    validate_certs: no
-    owner: root
-    group: root
-    mode: 0755
-  with_dict: "{{tools}}"
+#- name: Install tools
+#  unarchive:
+#    src: "{{item.value}}"
+#    dest: /usr/local/bin/
+#    remote_src: yes
+#    validate_certs: no
+#    owner: root
+#    group: root
+#    mode: 0755
+#  with_dict: "{{tools}}"
+#
+#- name: Install yq
+#  get_url:
+#    url: "{{yq_url}}"
+#    dest: /usr/local/bin/yq
+#    owner: root
+#    group: root
+#    mode: 0755
+#    validate_certs: no
 
-- name: Install yq
-  get_url:
-    url: "{{yq_url}}"
-    dest: /usr/local/bin/yq
-    owner: root
-    group: root
-    mode: 0755
-    validate_certs: no
-
-- name: Install required python modules
-  community.general.pipx:
-    name: "{{item}}"
-  with_items: "{{pip_packages}}"
+#- name: Install required python modules
+#  community.general.pipx:
+#    name: "{{item}}"
+#  with_items: "{{pip_packages}}"
 
 #- name: Install dysk
 #  unarchive:
